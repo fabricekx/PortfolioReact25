@@ -5,12 +5,17 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import des icônes GitHub et LinkedIn
-import { motion } from "framer-motion";
+import { motion,AnimatePresence } from "framer-motion";
 
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu mobile (hamburger)
-
+  const mobileMenuVariants = {
+    hidden: { opacity: 0, y: "-100%" }, // Menu caché (hors écran)
+    visible: { opacity: 1, y: 0 }, // Menu visible (position d'origine)
+    exit: { opacity: 0 }, // Menu qui disparaît (effet inverse de visible)
+  };
+  
   return (
     <div className="flex w-full h-full " id="main-div">
       {/* Sidebar */}
@@ -85,6 +90,7 @@ const App = () => {
       </button>
 
       {/* Mobile Sidebar */}
+      <AnimatePresence>
       {isMenuOpen && (
         <div className="fixed right-0 top-10  w-2/3 bg-opacity-90 p-6 lg:hidden z-50">
           <button
@@ -93,7 +99,15 @@ const App = () => {
           >
             ✖
           </button>
-          <ul className="mt-8 space-y-6 text-white font-medium">
+         
+          <motion.ul
+className="mt-8 space-y-6 text-white font-medium"
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={mobileMenuVariants}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
             <li className="text-end" onClick={() => setIsMenuOpen(false)}>
               <Link to="/" className="hover:text-gray-300">
                 Home
@@ -115,9 +129,10 @@ const App = () => {
                 Contact
               </Link>
             </li>
-          </ul>
+          </motion.ul>
         </div>
       )}
+      </AnimatePresence>
 
       {/* Zone principale qui change selon la page */}
       <div className="flex-1 justify-center align-middle p-10 bg-gray-900 text-white">
