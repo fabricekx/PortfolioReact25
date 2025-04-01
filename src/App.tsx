@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -6,9 +6,14 @@ import Projects from "./pages/Projects";
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import des icônes GitHub et LinkedIn
 import { motion,AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./my-components/languageSwitcher";
+
 
 
 const App = () => {
+  const { t } = useTranslation(); // Hook pour accéder aux traductions
+  const location = useLocation(); // Récupérer l'URL actuelle pour styliser le lien actuel
 
   // pour le curseur perso, avec la classe custom-cursor
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -19,6 +24,7 @@ const App = () => {
     window.addEventListener("mousemove", moveCursor);
     return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
+
 
   const [isHovering, setIsHovering] = useState(false); // pour le survol des liens
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Menu mobile (hamburger)
@@ -36,17 +42,19 @@ const App = () => {
       animate={{ x: cursorPosition.x - 5, 
         y: cursorPosition.y - 5,  
         scale: isHovering ? 2 : 1, // Agrandit si hover
-        backgroundColor: isHovering ? "rgba(0,115,230,0.5)" : "transparent", }}
+        backgroundColor: isHovering ? "rgba(0,115,230,0.5)" : "rgba(131, 154, 247, 0.03)" }}
       transition={{ type: "spring", stiffness: 100, damping: 20 }}
     />
       {/* Sidebar */}
       <div className="small  w-2/5 bg-gray-900 text-white p-6 flex flex-col justify-evenly">
+
         {/* Nom & Présentation */}
         <motion.div 
   initial={{ x: -100, opacity: 0 }}  // Commence hors de l'écran à gauche
   animate={{ x: 0, opacity: 1 }}     // Slide vers la droite avec une opacité qui augmente
   transition={{ duration: 0.5, ease: "easeOut" }} 
 >
+
 <motion.h1 
  initial={{ opacity: 0, y: -20 }}
  animate={{ opacity: 1, y: 0 }}
@@ -56,51 +64,60 @@ const App = () => {
           <p className="text-gray-400 !text-lg sm:!text-3xl mt-2">
             Full Stack Developper
           </p>
-          <p className="text-gray-400">I build modern, responsive, and beautiful web applications</p>
+          <p className="text-gray-400">{t("description")}</p>
         
         </motion.div>
+
         {/* Navigation */}
-        <motion.nav 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3, duration: 0.5 }}
+      className="mt-8 sidebar"
+    >
+      <ul className="space-y-4">
+        {/* Création des liens à partir d'un tableau */}
+        {[
+          { path: "/", label: t("home"), icon: "🏠" },
+          { path: "/about", label: t("about"), icon: "👤" },
+          { path: "/projects", label: t("projects"), icon: "📁" },
+          { path: "/contact", label: t("contact"), icon: "📧" },
+        ].map((item) => (
+          <li key={item.path} className="relative">
+            <Link
+              to={item.path}
+              className="interactive-area hide-cursor hover:text-gray-300 relative"
+              onMouseEnter={() => setIsHovering(true)} // modification du pointer
+              onMouseLeave={() => setIsHovering(false)}
+            >
+              {item.label} 
+            </Link>
+            {location.pathname === item.path && ( // si le chemin correspond à la page en cours, on ajoute une ligne avec une animation
+              <motion.div
+                layoutId="underline"
+                className="absolute left-0 bottom-0 w-1/2 h-[2px] bg-blue-500"
+                initial={{ width: 0 }}
+                animate={{ width: "100px" }}
+                transition={{ duration: 0.3 }}
+              />
+            )}
+          </li>
+        ))}
+      </ul>
+    </motion.nav>
+
+{/* Bouton Langue */}
+        <motion.div 
+        initial={{ opacity: 0 , y:30}}
+        animate={{ opacity: 1 , y:0}}
         transition={{ delay: 0.3, duration: 0.5 }}
-        className="mt-8 sidebar">
-          <ul className="space-y-4">
-            {/* le setIsHovering permet de modifier le curseur lors du survol des liens */}
-            <li 
-      >
-              <Link to="/" className="interactive-area hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}>
-                🏠 Home
-              </Link>
-            </li>
-            <li
-      >
-              <Link to="/about" className="interactive-area hide-cursor hover:text-gray-300" 
-              onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}>
-                👤 About 
-              </Link>
-            </li>
-            <li
-      >
-              <Link to="/projects" className="interactive-area hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}>
-                📁 Projects
-              </Link>
-            </li>
-            <li
-      >
-              <Link to="/contact" className="interactive-area hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}>
-                📧 Contact
-              </Link>
-            </li>
-          </ul>
-        </motion.nav>
+        className="hide-cursor w-1/4" onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}>
+        <LanguageSwitcher /> </motion.div>
 
          {/* Social Links */}
          <div className="mt-8 flex space-x-4 justify-center">
+          
           <a href="https://github.com/ton-username" target="_blank" rel="noopener noreferrer" className="interactive-area hide-cursor text-white hover:text-gray-300">
             <FaGithub size={24} onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}/>
@@ -142,30 +159,33 @@ className="mt-8 space-y-6 text-white font-medium"
           exit="exit"
           variants={mobileMenuVariants}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-        >
-            <li className="text-end" onClick={() => setIsMenuOpen(false)}>
-              <Link to="/" className=" hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => {
+            setIsMenuOpen(false);
+            setIsHovering(false);
+          }}        >
+            <li className="text-end" onClick={() => {setIsMenuOpen(false); setIsHovering(false)}}>
+              <Link to="/" className="hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}>
-                Home
+                {t("home")}
               </Link>
               
             </li>
-            <li className="text-end"  onClick={() => setIsMenuOpen(false)}>
-              <Link to="/about" className="hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
+            <li className="text-end"  onClick={() => {setIsMenuOpen(false); setIsHovering(false)}}>
+              <Link to="/about" className="hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}>
-                About
+                {t("about")}
               </Link>
             </li>
-            <li className="text-end"  onClick={() => setIsMenuOpen(false)}>
-              <Link to="/projects" className="hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
+            <li className="text-end"  onClick={() => {setIsMenuOpen(false); setIsHovering(false)}}>
+              <Link to="/projects" className="hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}>
-                Projects
+                {t("projects")}
               </Link>
             </li>
-            <li className="text-end"  onClick={() => setIsMenuOpen(false)}>
-              <Link to="/contact" className="hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
+            <li className="text-end"  onClick={() => {setIsMenuOpen(false); setIsHovering(false)}}>
+              <Link to="/contact" className="hide-cursor hover:text-gray-300" onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}>
-                Contact
+                {t("contact")}
               </Link>
             </li>
           </motion.ul>
@@ -176,7 +196,7 @@ className="mt-8 space-y-6 text-white font-medium"
       {/* Zone principale qui change selon la page */}
       <div className="flex-1 justify-center align-middle p-10 bg-gray-900 text-white">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home setIsHovering={setIsHovering} />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
