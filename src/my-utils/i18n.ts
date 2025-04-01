@@ -10,8 +10,10 @@ const resources = {
       home: "Home",
       about: "About",
       projects: "Projects",
+      myprojects: "My Projects",
       contact: "Contact",
-      intro: "Hi, I am a freelance web developer specialized in accessibility and user interface design. I contribute to the creation and maintenance of front-end and back-end user interface components, ensuring compliance with web accessibility standards and best practices to provide an inclusive user experience. I am also a web technology trainer. "
+      intro: "Hi, I am a freelance web developer specialized in accessibility and user interface design. I contribute to the creation and maintenance of front-end and back-end user interface components, ensuring compliance with web accessibility standards and best practices to provide an inclusive user experience. I am also a web technology trainer. ",
+    showProject: "Show Project"
     },
   },
   fr: {
@@ -22,8 +24,11 @@ const resources = {
       home: "Accueil",
       about: "À propos",
       projects: "Projets",
+      myprojects: "Mes Projets",
+
       contact: "Contact",
-      intro: "Bonjour, je suis développeur web freelance, spécialisé en accessibilité et en interfaces utilisateur. Je contribue à la création et à la maintenance des composants d'interface utilisateur front-end et back-end, en veillant au respect des normes et bonnes pratiques d'accessibilité web pour offrir une expérience utilisateur optimale. Je suis également formateur en technologies Web"
+      intro: "Bonjour, je suis développeur web freelance, spécialisé en accessibilité et en interfaces utilisateur. Je contribue à la création et à la maintenance des composants d'interface utilisateur front-end et back-end, en veillant au respect des normes et bonnes pratiques d'accessibilité web pour offrir une expérience utilisateur optimale. Je suis également formateur en technologies Web",
+      showProject: "Voir le projet"
 
     },
   },

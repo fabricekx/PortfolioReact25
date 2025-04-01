@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import {  Routes, Route, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -194,11 +194,11 @@ className="mt-8 space-y-6 text-white font-medium"
       </AnimatePresence>
 
       {/* Zone principale qui change selon la page */}
-      <div className="flex-1 justify-center align-middle p-10 bg-gray-900 text-white">
+      <div className="flex-1 justify-center align-middle p-10 bg-gray-900 text-white overflow-y-auto max-h-screen">
         <Routes>
           <Route path="/" element={<Home setIsHovering={setIsHovering} />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects setIsHovering={setIsHovering} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
