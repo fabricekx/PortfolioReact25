@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formations",
+  "info": {
+    "singularName": "formation",
+    "pluralName": "formations",
+    "displayName": "Formation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "etablissement": {
+      "type": "string"
+    },
+    "diplome": {
+      "type": "string"
+    },
+    "diplomeEn": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "descriptionEn": {
+      "type": "string"
+    }
+  }
+}
