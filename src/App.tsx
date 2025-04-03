@@ -135,7 +135,7 @@ const App = () => {
         {/* Social Links */}
         <div className="mt-8 flex space-x-4 justify-center">
           <a
-            href="https://github.com/ton-username"
+            href="https://github.com/fabricekx"
             target="_blank"
             rel="noopener noreferrer"
             className="interactive-area hide-cursor text-white hover:text-gray-300"
@@ -147,7 +147,7 @@ const App = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/ton-username"
+            href="https://www.linkedin.com/in/fabricehendrikx/"
             target="_blank"
             rel="noopener noreferrer"
             className="interactive-area hide-cursor text-white hover:text-gray-300"

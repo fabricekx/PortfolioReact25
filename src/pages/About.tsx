@@ -51,6 +51,7 @@ const About: React.FC<AboutProps> = ({ setIsHovering }) => {
     fetchExperiences().then(setExperiences).catch(console.error);
   }, []);
 
+
   return (
     <div className="w-full overflow-x-auto">
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
