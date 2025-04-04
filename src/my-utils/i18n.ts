@@ -35,7 +35,9 @@ const resources = {
       montagne : "Mountain",
       voilier : "Sailing",
       randonnée: "Hiking",
-      botanique: "Botanical"
+      botanique: "Botanical",
+        // Partie Contact
+      contactMe: "Let's stay in touch!"
     },
   },
   fr: {
@@ -71,7 +73,9 @@ const resources = {
       montagne : "Montagne",
       voilier : "Voilier",
       randonnée: "Randonnée",
-      botanique: "Botanique"
+      botanique: "Botanique",
+      // Partie Contact
+      contactMe: "Restons en contact!"
     },
   },
 };

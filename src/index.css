@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "flag-icon-css/css/flag-icon.min.css";
-
+/* @import "flag-icon-css/css/flag-icon.min.css"; */
+/* l'import ne fonctionne pas, il est fait directement dans App.tsx */
 
 @custom-variant dark (&:is(.dark *));
 
