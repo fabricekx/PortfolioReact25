@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "flag-icon-css/css/flag-icon.min.css";
-
+/* @import "flag-icon-css/css/flag-icon.min.css"; */
+/* @import "../../node_modules/flag-icon-css/css/flag-icon.min.css"; */
+/* L'import de flag-icon ne fonctionne pas ici, il est fait directement dans App.tsx */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -38,7 +39,7 @@ html, body, #root, #main-div {
   scroll-margin-top: 80px; /* Ajuste en fonction de la hauteur de ta nav 
 } */
 
-
+/* Media querry pour responsive */
 @media (max-width: 768px) {
   /* Mobile: changer la direction du flex pour empiler les éléments */
   #root, #main-div {
@@ -59,6 +60,8 @@ html, body, #root, #main-div {
   margin-top: auto;
 }
 }
+
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

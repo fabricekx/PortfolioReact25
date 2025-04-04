@@ -2,13 +2,14 @@ import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import Projects from "./pages/PRojets";
 import { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import des icônes GitHub et LinkedIn
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./my-components/languageSwitcher";
 import "flag-icon-css/css/flag-icons.min.css";
+import ProjectsCarousel from "./pages/ProjectsCarousel";
 
 const App = () => {
   const { t } = useTranslation(); // Hook pour accéder aux traductions
@@ -83,6 +84,8 @@ const App = () => {
               { path: "/about", label: t("about"), icon: "👤" },
               { path: "/projects", label: t("projects"), icon: "📁" },
               { path: "/contact", label: t("contact"), icon: "📧" },
+              { path: "/projectsCarousel", label: "projectsCarousel", icon: "📧" },
+
             ].map((item) => (
               <li key={item.path} className="relative">
                 <Link
@@ -275,6 +278,10 @@ const App = () => {
           <Route
             path="/projects"
             element={<Projects setIsHovering={setIsHovering} />}
+          />
+           <Route
+            path="/projectsCarousel"
+            element={<ProjectsCarousel setIsHovering={setIsHovering} />}
           />
           <Route path="/contact" element={<Contact />} />
         </Routes>
