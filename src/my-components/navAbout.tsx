@@ -8,7 +8,7 @@ interface NavAboutProps {
 }
 const NavAbout: React.FC<NavAboutProps> = ({ setIsHovering }) => {
   const [activeLink, setActiveLink] = useState<string | null>(null);
-    const { t, i18n } = useTranslation(); // Accès aux traductions
+    const {i18n } = useTranslation(); // Accès aux traductions
   
   const navItems = [
     { path: "#experience", label: i18n.language === "fr" ? "Expériences" : "Experience" },
