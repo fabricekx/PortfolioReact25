@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technos",
+  "info": {
+    "singularName": "techno",
+    "pluralName": "technos",
+    "displayName": "Techno"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Technos": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "technos"
+    }
+  }
+}
