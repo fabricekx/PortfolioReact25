@@ -9,6 +9,7 @@ import {
 import { fetchProjects } from "@/my-utils/apiFetchProjects";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import fallbackProjects from '../my-json/projects-strapi.json'; // Chemin relatif à `src`
 
 interface ProjectsProps {
   setIsHovering: (hovering: boolean) => void;
@@ -34,9 +35,20 @@ interface Project {
 const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const { t, i18n } = useTranslation(); // Accès aux traductions
+  const inline = true
+
+   // Pour mettre à jour en json les données de strapi local, il faut soit lancer les scripts
+  // indépendamment (ex node script/prepareExperience.mjs) soit lancer prepareAll grâce à
+  //  npm run prepare
+  
 
   useEffect(() => {
-    fetchProjects().then(setProjects).catch(console.error);
+    if (inline) {
+      setProjects(fallbackProjects);
+      console.log("fallbackProjects picture url:", fallbackProjects[0]?.Picture?.url);
+    } else {
+      fetchProjects().then(setProjects).catch(console.error);
+    }
   }, []);
 
   return (
@@ -83,7 +95,9 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
                 {" "}
                 {imageUrl && (
                   <img
-                    src={`http://localhost:1337${imageUrl}`}
+                    // src={`http://localhost:1337${imageUrl}`} // si on veut la version strapi
+                    src={imageUrl}
+
                     alt={project.Title}
                     className=" md:w-1/3 h-48 object-cover rounded-lg"
                   />

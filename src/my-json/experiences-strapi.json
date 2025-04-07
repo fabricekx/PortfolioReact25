@@ -1,0 +1,58 @@
+[
+  {
+    "id": 4,
+    "documentId": "gqiree8k7vyv00w9vp3dowqa",
+    "date": "Depuis 2024",
+    "poste": "Développeur Application Androïd",
+    "entreprise": "Frreelance",
+    "description": "Développement d'une application mobile Androïd d'aide à la Navigation marine (Météo, Données de navigation) ayant une interface de Pilotage Automatique permettant de maintenir le cap suivi (à travers un actuateur contrôlé par bluetooth)",
+    "posteEN": "Androïd Developper",
+    "descriptionEn": "Development of an Android mobile application to assist marine navigation (weather, navigation data) with an automatic pilot interface to maintain the course followed (via a Bluetooth-controlled actuator)",
+    "place": "Grasse (06)",
+    "createdAt": "2025-04-04T11:49:50.651Z",
+    "updatedAt": "2025-04-04T11:52:45.663Z",
+    "publishedAt": "2025-04-04T11:52:45.695Z"
+  },
+  {
+    "id": 6,
+    "documentId": "vva7l7e3y4my8bqnl6kyr2sw",
+    "date": "Depuis 2025",
+    "poste": "Formateur Developpement Web",
+    "entreprise": "ECAM - EPMI",
+    "description": "Je donne les bases en développement web Front End (HTML, CSS, JS) et Back End (MySQL, PHP) à des étudiants de première et seconde années préparatoire dans une école d'ingénieurs",
+    "posteEN": "Web Development Trainer",
+    "descriptionEn": "I teach the basics of Front End (HTML, CSS, JS) and Back End (MySQL, PHP) web development to first and second year preparatory students in an engineering school.",
+    "place": "Grasse (06)",
+    "createdAt": "2025-04-04T11:53:46.008Z",
+    "updatedAt": "2025-04-04T11:53:46.008Z",
+    "publishedAt": "2025-04-04T11:53:46.024Z"
+  },
+  {
+    "id": 8,
+    "documentId": "p5cmum9kvfefttv3my3j0y3t",
+    "date": "2023-2024",
+    "poste": "Développeur Web Full Stack",
+    "entreprise": "WS Academie",
+    "description": "Création des interfaces et composants métiers utilisateur d’un LMS en utilisant le framework Symfony. ",
+    "posteEN": "Full Stack Developper",
+    "descriptionEn": "Creation of user interfaces and business components for an LMS using the Symfony framework.",
+    "place": "Cannes (06)",
+    "createdAt": "2025-04-04T11:55:08.973Z",
+    "updatedAt": "2025-04-04T11:55:08.973Z",
+    "publishedAt": "2025-04-04T11:55:08.988Z"
+  },
+  {
+    "id": 10,
+    "documentId": "jno8z918z7lwa0pzcacv2o9f",
+    "date": "Depuis 2025",
+    "poste": "Développeur Web Full Stack",
+    "entreprise": "Frreelance",
+    "description": "Création et participation à la création de sites complets ou d'interfaces Front-End et/ou Back-End. Utilisation des bibliothèques React",
+    "posteEN": "Full Stack Developper",
+    "descriptionEn": "Creation of user interfaces and business components for an LMS using the Symfony framework.",
+    "place": "Grasse (06)",
+    "createdAt": "2025-04-04T11:56:14.375Z",
+    "updatedAt": "2025-04-04T11:56:14.375Z",
+    "publishedAt": "2025-04-04T11:56:14.405Z"
+  }
+]
