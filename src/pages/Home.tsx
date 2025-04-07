@@ -35,7 +35,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
         {t("welcome")}
       </motion.h1>
       <motion.p
-        className="m-8 text-lg md:text-xl text-gray-300 max-w-2xl"
+        className="!m-8 !text-lg md:!text-xl text-gray-300 max-w-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -53,7 +53,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
       >
         <Link
           to="/projects"
-          className="interactive-area hide-cursor mt-8 px-6 py-3 bg-blue-900 text-white rounded-lg shadow-lg hover:bg-blue-600 transition"
+          className="interactive-area hide-cursor !mt-8 !px-6 !py-3 bg-blue-900 text-white rounded-lg shadow-lg hover:bg-blue-600 transition"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
           onClick={() => setIsHovering(false)}

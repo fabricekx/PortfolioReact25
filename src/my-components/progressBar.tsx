@@ -16,15 +16,15 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ label, percentage, color, isV
   
 
   return (
-    <div className="mb-4">
-      <div className="flex justify-between mb-1">
-      {img &&<img src={img} alt={label} className="w-6 h-6" />} 
+    <div className="!mb-4">
+      <div className="flex justify-between !mb-1">
+      {img &&<img src={img} alt={label} className="w-6 !h-6" />} 
 
      
-        <span className="text-white font-medium flex items-center space-x-4">{icon  && icon}  <span>{label}</span></span>
+        <span className="text-white font-medium flex items-center !space-x-4">{icon  && icon}  <span>{label}</span></span>
         {/* <span className="text-gray-400">{percentage}%</span> */}
       </div>
-      <div className="w-full bg-gray-700 rounded-full h-4">
+      <div className="w-full bg-gray-700 rounded-full !h-4">
         <motion.div
         
   className={`${color ? color : "bg-blue-500"} h-4 rounded-full`}
