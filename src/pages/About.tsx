@@ -50,7 +50,7 @@ const inline = true
   
   // Pour mettre à jour en json les données de strapi local, il faut soit lancer les scripts
   // indépendamment (ex node script/prepareExperience.mjs) soit lancer prepareAll grâce à
-  //  npm run prepare
+  //  npm run prepareAll
   
   useEffect(() => {
     if (inline) {
