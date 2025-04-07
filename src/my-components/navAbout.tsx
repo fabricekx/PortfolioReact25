@@ -77,7 +77,7 @@ const NavAbout: React.FC<NavAboutProps> = ({ setIsHovering }) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3, duration: 0.5 }}
-      className="mt-8 md:flex hidden space-x-4 justify-around"
+      className="!mt-8 md:flex hidden !space-x-4 justify-around"
       onMouseEnter={() => setIsHovering(true)} // modification du pointer
       onMouseLeave={() => setIsHovering(false)}
     >

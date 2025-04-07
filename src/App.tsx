@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex w-full h-full " id="main-div">
+    <div className="flex w-full h-full  " id="main-div">
       {/* curseur */}
       <motion.div
         className="custom-cursor"
@@ -48,7 +48,7 @@ const App = () => {
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       />
       {/* Sidebar */}
-      <div className="small  w-2/5 bg-gray-900 text-white p-6 flex flex-col justify-evenly">
+      <div className="small  w-2/5 bg-gray-900 text-white !p-6 flex flex-col justify-evenly">
         {/* Nom & Présentation */}
         <motion.div
           initial={{ x: -100, opacity: 0 }} // Commence hors de l'écran à gauche
@@ -63,7 +63,7 @@ const App = () => {
           >
             Fabrice Hendrikx
           </motion.h1>
-          <p className="text-gray-400 !text-lg sm:!text-3xl mt-2">
+          <p className="text-gray-400 text-lg sm:text-3xl !mt-2">
             Full Stack Developper
           </p>
           <p className="text-gray-400">{t("description")}</p>
@@ -74,9 +74,9 @@ const App = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-8 sidebar"
+          className="!mt-8 sidebar"
         >
-          <ul className="space-y-4">
+          <ul className="!space-y-4">
             {/* Création des liens à partir d'un tableau */}
             {[
               { path: "/", label: t("home"), icon: "🏠" },
@@ -96,7 +96,7 @@ const App = () => {
                 {location.pathname === item.path && ( // si le chemin correspond à la page en cours, on ajoute une ligne avec une animation
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 bottom-0 w-1/2 h-[2px] bg-blue-500"
+                    className="absolute left-0 bottom-0 w-1/2 !h-[2px] bg-blue-500"
                     initial={{ width: 0 }}
                     animate={{
                       width: "100px",
@@ -131,9 +131,9 @@ const App = () => {
         </motion.div>
 
         {/* Technos utiisées */}
-        <p className="text-gray-500">{t("techno")}</p>
+        <p className="text-gray-500 text-tiny md:text-sm">{t("techno")}</p>
         {/* Social Links */}
-        <div className="mt-8 flex space-x-4 justify-center">
+        <div className="mt-8 flex space-x-4 justify-evenly">
           <a
             href="https://github.com/fabricekx"
             target="_blank"

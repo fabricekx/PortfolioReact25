@@ -67,7 +67,7 @@ const inline = true
   return (
     <div className="w-full overflow-x-auto">
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
-      <div className="md:fixed bg-gray-900 me-10 pt-5 top-0 z-1">
+      <div className="md:fixed bg-gray-900 !me-10 !pt-5 top-0 z-1">
         <motion.h1 initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
@@ -87,14 +87,14 @@ const inline = true
         <motion.p  initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center">{t("aboutMe")}
+              className="text-center !pe-5">{t("aboutMe")}
               </motion.p>
 <NavAbout setIsHovering={setIsHovering}/>
       
       </div>
       {/* div contenant toutes les cartes experiences, formations etc.. */}
-      <section id="experience" className="p-6 flex flex-col space-y-6 md:pt-56">
-      <h2 className="text-white text-2xl mb-4">{t("experiences")}</h2>
+      <section id="experience" className="!p-6 flex flex-col !space-y-6 md:!pt-56">
+      <h2 className="text-white !text-2xl !mb-4">{t("experiences")}</h2>
 
         {experiences.map((experience) => {
           return (
@@ -104,7 +104,7 @@ const inline = true
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="hover:scale-105 border-0 transition-transform bg-gray-800 flex flex-col md:flex-row items-start p-4 w-full">
+            <Card className="hover:scale-105 border-0 transition-transform bg-gray-800 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
               <div className=" md:w-1/3  object-cover rounded-lg">
                 <div className="text-gray-600"> {experience.date} </div>
                 <div className="text-gray-600 font-bold">
@@ -134,12 +134,12 @@ const inline = true
         })}
       </section>
 
-      <section id="formation" className="p-6 flex flex-col space-y-6 ">
-      <h2 className="text-white text-2xl mb-4">{t("formation")}</h2>
+      <section id="formation" className="!p-6 flex flex-col !space-y-6 ">
+      <h2 className="text-white !text-2xl !mb-4">{t("formation")}</h2>
 
         {formations.map((formation) => {
           return (
-            <Card  key={formation.id} className="hover:scale-105 border-0 transition-transform bg-gray-800 flex flex-col md:flex-row items-start p-4 w-full">
+            <Card  key={formation.id} className="hover:scale-105 border-0 transition-transform bg-gray-800 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
               <div className=" md:w-1/3  object-cover rounded-lg">
                 <div className="text-gray-600"> {formation.date} </div>
                 <div className="text-gray-600 font-bold">
@@ -171,7 +171,7 @@ const inline = true
 <Skills></Skills>
 
 <Langues></Langues>
-<div className="h-25"></div>
+<div className="h-10"></div>
 <Hobbies></Hobbies>
     </div>
   );

@@ -9,7 +9,7 @@ import {
 import { fetchProjects } from "@/my-utils/apiFetchProjects";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import fallbackProjects from '../my-json/projects-strapi.json' assert { type: "json" }; // Chemin relatif à `src`
+import fallbackProjects from '../my-json/projects-strapi.json' ; // Chemin relatif à `src`
 
 interface ProjectsProps {
   setIsHovering: (hovering: boolean) => void;
@@ -55,7 +55,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
     <div className="h-full flex flex-col items-center  text-center">
       {/* div titre */}
       <motion.h1
-        className="text-5xl width-1/2 md:text-7xl md:fixed me-10 bg-gray-900 top-0 left-30px right-15px z-50 p-4 font-bold"
+        className="!text-5xl width-1/2 md:!text-7xl md:fixed !me-10 bg-gray-900 top-0 left-30px right-15px z-50 !p-4 font-bold"
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
@@ -77,7 +77,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
       </motion.h1>
 
       {/* div contenant toutes les cartes */}
-      <div className="p-6 space-y-6 pt-24">
+      <div className="!p-6 !space-y-6 !pt-24">
         {/* Une seule carte par ligne avec espacement */}
         {projects.map((project) => {
           // Récupère l'image en format "small" si dispo, sinon l'image originale
@@ -91,7 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Card className="hover:scale-105 border-0 transition-transform bg-gray-800 flex flex-col md:flex-row items-center p-4 w-full">
+              <Card className="hover:scale-105 border-0 transition-transform bg-gray-800 flex flex-col md:flex-row items-center !p-4 w-full">
                 {" "}
                 {imageUrl && (
                   <img
@@ -115,18 +115,18 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
                         : project.Description}
                     </CardDescription>
                     {/* Affichage des technos */}
-                    <div className="mt-2 flex flex-wrap">
+                    <div className="!mt-2 flex flex-wrap">
                       {project.technos.map((techno) => (
                         <span
                           key={techno.id}
-                          className="bg-blue-500 text-white py-1 px-3 rounded-full text-tiny m-1"
+                          className="bg-blue-500 text-white !py-1 !px-3 rounded-full !text-tiny !m-1"
                         >
                           {techno.Technos}
                         </span>
                       ))}
                     </div>
                   </CardHeader>
-                  <CardContent className="mt-auto m-2">
+                  <CardContent className="!mt-auto !m-2">
                     <motion.a
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
                       href={project.Link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hide-cursor inline-block text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition"
+                      className="hide-cursor inline-block text-white !px-4 !py-2 rounded-lg shadow-md hover:bg-blue-600 transition"
                       onMouseEnter={() => setIsHovering(true)}
                       onMouseLeave={() => setIsHovering(false)}
                       onClick={() => setIsHovering(false)}

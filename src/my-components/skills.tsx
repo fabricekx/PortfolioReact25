@@ -23,8 +23,8 @@ const {ref: refSkill,isVisible : isVisibleSkill}= useSectionReacher(); // hook p
   
 
   return (
-    <section ref={refSkill} id="programmation" className="p-14 flex flex-col space-y-6 ">
-      <h2 className="text-white text-2xl mb-4">{t("programmation2")}</h2>
+    <section ref={refSkill} id="programmation" className="!p-14 flex flex-col !space-y-6 ">
+      <h2 className="text-white !text-2xl !mb-4">{t("programmation2")}</h2>
       <ProgressBar icon={techIcons["HTML & CSS"]} isVisible={isVisibleSkill} percentage={95} label="HTML & CSS" />
       <ProgressBar icon={techIcons["JavaScript"]} isVisible={isVisibleSkill} percentage={80} label="JavaScript [React, Node.Js, Nest.Js]" />
       <ProgressBar icon={techIcons["PHP"]}  isVisible= {isVisibleSkill} percentage={75} label="PHP [Symfony]" color="bg-emerald-400"/>
