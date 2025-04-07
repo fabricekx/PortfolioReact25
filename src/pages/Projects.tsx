@@ -9,7 +9,7 @@ import {
 import { fetchProjects } from "@/my-utils/apiFetchProjects";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import fallbackProjects from '../my-json/projects-strapi.json'; // Chemin relatif à `src`
+import fallbackProjects from '../my-json/projects-strapi.json' assert { type: "json" }; // Chemin relatif à `src`
 
 interface ProjectsProps {
   setIsHovering: (hovering: boolean) => void;
@@ -17,7 +17,7 @@ interface ProjectsProps {
 
 interface Project {
   id: number;
-  technos: [{ id: number; Technos: string }];
+  technos:  { id: number; Technos: string }[];
   Title: string;
   Description: string;
   TitleFr: string;
