@@ -29,7 +29,7 @@ const Hobbies = () => {
       </div>
       <div className="flex items-center space-x-2">
         <FaLaptopCode className="w-6 h-6" />
-        <span>Coding</span>
+        <span>  Coding</span>
       </div>
 </div>
 

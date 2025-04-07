@@ -94,7 +94,8 @@ const inline = true
       </div>
       {/* div contenant toutes les cartes experiences, formations etc.. */}
       <section id="experience" className="p-6 flex flex-col space-y-6 md:pt-56">
-        
+      <h2 className="text-white text-2xl mb-4">{t("experiences")}</h2>
+
         {experiences.map((experience) => {
           return (
           <motion.div
