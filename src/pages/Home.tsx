@@ -9,13 +9,31 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
   const { t } = useTranslation(); // Accès aux traductions
 
+  // Animation d'apparition pour le boutton
+    const containerVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
+    };
+
   return (
     <div className="h-full flex flex-col items-center justify-center text-center">
       <motion.h1
-        className="text-5xl md:text-7xl font-bold"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
+        animate={{
+          opacity: 1,
+          y: 0,
+          x: [0, 10, -10, 0], // Animation répétée pour le mouvement horizontal
+        }}
+        transition={{
+          opacity: { duration: 0.5 }, // Pour l'animation d'apparition
+          y: { duration: 0.5 }, // Pour l'animation d'apparition
+          x: {
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }, // Pour l'animation répétée
+        }}
       >
         {t("welcome")}
       </motion.h1>
@@ -28,9 +46,9 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
         {t("intro")}
       </motion.p>
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
         <Link
           to="/projects"

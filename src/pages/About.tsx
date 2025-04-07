@@ -14,6 +14,8 @@ import { motion } from "framer-motion";
 import Skills from "@/my-components/skills";
 import Langues from "@/my-components/langues";
 import Hobbies from "@/my-components/hobbies";
+import fallbackFormations from '../my-json/formations-strapi.json'; // Chemin relatif à `src`
+import fallbackExperiences from '../my-json/experiences-strapi.json'; // Chemin relatif à `src`
 
 interface AboutProps {
   setIsHovering: (hovering: boolean) => void;
@@ -34,23 +36,32 @@ interface Formations {
   id: number;
   date: string;
   etablissement: string;
-  etablissementEn: string;
   diplomeEn: string;
-
+description: string;
+descriptionEn: string
   diplome: string;
 }
 const About: React.FC<AboutProps> = ({ setIsHovering }) => {
   const [experiences, setExperiences] = useState<Experiences[]>([]);
   const [formations, setFormations] = useState<Formations[]>([]);
-
+const inline = true
   const { t, i18n } = useTranslation(); // Accès aux traductions
-  useEffect(() => {
-    fetchFormations().then(setFormations).catch(console.error);
-  }, []);
-  useEffect(() => {
-    fetchExperiences().then(setExperiences).catch(console.error);
-  }, []);
 
+  
+  // Pour mettre à jour en json les données de strapi local, il faut soit lancer les scripts
+  // indépendamment (ex node script/prepareExperience.mjs) soit lancer prepareAll grâce à
+  //  npm run prepare
+  
+  useEffect(() => {
+    if (inline) {
+      setFormations(fallbackFormations);
+      console.log(fallbackExperiences);
+      setExperiences(fallbackExperiences);
+    } else {
+      fetchFormations().then(setFormations).catch(console.error);
+      fetchExperiences().then(setExperiences).catch(console.error);
+    }
+  }, []);
 
   
   return (
@@ -142,7 +153,12 @@ const About: React.FC<AboutProps> = ({ setIsHovering }) => {
                       ? formation.diplome
                       : formation.diplomeEn}
                   </CardTitle>
-              
+                  <CardDescription>
+                    {" "}
+                    {i18n.language === "fr"
+                      ? formation.description
+                      : formation.descriptionEn}
+                  </CardDescription>
                 </CardHeader>
               </div>
             </Card>
