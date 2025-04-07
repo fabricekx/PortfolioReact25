@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare" : "node scripts/prepareAll.mjs"
+    "prepareAll" : "node scripts/prepareAll.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
