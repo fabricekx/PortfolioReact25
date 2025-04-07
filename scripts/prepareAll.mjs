@@ -9,7 +9,10 @@ const scripts = [
   'node ./scripts/prepareFormations.mjs',
   'node ./scripts/prepareImages.mjs',
 ];
-
+if (process.env.VERCEL === '1') {
+  console.log("🛑 Skipping prepareAll.mjs on Vercel");
+  process.exit(0);
+}
 (async () => {
   for (const cmd of scripts) {
     console.log(`🚀 Running: ${cmd}`);
