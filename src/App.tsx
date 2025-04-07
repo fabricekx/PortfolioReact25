@@ -163,7 +163,7 @@ const App = () => {
 
       {/* Mobile Menu Button (Hamburger) */}
       <button
-        className="interactive-area hide-cursor md:hidden bg-gray-600 fixed top-6 right-6 text-black z-50 hamburger-btn"
+        className="interactive-area hide-cursor md:hidden !bg-gray-300 fixed top-6 right-6 text-black z-50 hamburger-btn"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -176,7 +176,7 @@ const App = () => {
         {isMenuOpen && (
           <div className="fixed right- top-5  w-2/3 bg-opacity-90 p-6 lg:hidden z-50">
             <button
-              className="fixed bg-gray-600 right-6 top-6 text-black text-2xl"
+              className="fixed !bg-gray-300 right-6 top-6 text-black text-2xl"
               onClick={() => setIsMenuOpen(false)}
             >
               ✖
