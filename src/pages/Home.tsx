@@ -10,10 +10,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
   const { t } = useTranslation(); // Accès aux traductions
 
   // Animation d'apparition pour le boutton
-    const containerVariants = {
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0, transition: { duration: 0.8, staggerChildren: 0.2 } },
-    };
+   
 
   return (
     <div className="h-full flex flex-col items-center justify-center text-center">
@@ -25,7 +22,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
           x: [0, 10, -10, 0], // Animation répétée pour le mouvement horizontal
         }}
         transition={{
-          opacity: { duration: 0.5 }, // Pour l'animation d'apparition
+           duration: 0.5 , // Pour y et opacity
           y: { duration: 0.5 }, // Pour l'animation d'apparition
           x: {
             duration: 2,
@@ -46,9 +43,13 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
         {t("intro")}
       </motion.p>
       <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+       animate={{ opacity: [0.7, 1, 0.7] }}
+       transition={{
+         duration: 2,
+         repeat: Infinity,
+         repeatType: "loop",
+         ease: "easeInOut",
+       }}
       >
         <Link
           to="/projects"
