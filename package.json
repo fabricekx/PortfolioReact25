@@ -7,13 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "prepareAll" : "node scripts/prepareAll.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.2",   
     "@tailwindcss/vite": "^4.0.17",
     "axios": "^1.8.4",
+  
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "flag-icon-css": "^4.1.7",
