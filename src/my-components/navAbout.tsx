@@ -85,7 +85,7 @@ const NavAbout: React.FC<NavAboutProps> = ({ setIsHovering }) => {
         <div key={item.path} className="relative">
           <a
             href={item.path}
-            className="interactive-area hide-cursor text-white hover:text-gray-300"
+            className="interactive-area hide-cursor !text-emerald-900 hover:text-gray-300"
             onClick={(e) => {setActiveLink(item.path); e.preventDefault() // empeche le scroll natif
               handleScrollTo(item.path);
 
@@ -95,7 +95,7 @@ const NavAbout: React.FC<NavAboutProps> = ({ setIsHovering }) => {
           </a>
           {activeLink === item.path && (
             <motion.div
-              className="absolute left-0 bottom-0 w-full h-[2px] bg-blue-500"
+              className="absolute left-0 bottom-0 w-full  h-[4px] bg-emerald-900"
               layoutId="underline2"
               initial={{ width: 0 }}
               animate={{ width: "100%" }}

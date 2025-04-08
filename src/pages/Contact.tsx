@@ -49,7 +49,7 @@ export default function Contact() {
         initial="hidden"
         animate="visible"className="flex flex-col h-1/2 justify-evenly">
       {/* Téléphone */}
-      <a href={`tel:${phone}`} className="flex items-center space-x-2 hover:text-blue-500 transition">
+      <a href={`tel:${phone}`} className="flex items-center space-x-2 !text-emerald-950 hover:!text-emerald-800 transition">
         <motion.span variants={iconVariants} animate="animate">
         <FaPhone className="text-xl !m-5" />
         </motion.span>
@@ -57,7 +57,7 @@ export default function Contact() {
       </a>
 
       {/* Email */}
-      <a href={`mailto:${email}`} className="flex items-center space-x-2 hover:text-blue-500 transition">
+      <a href={`mailto:${email}`} className="flex items-center space-x-2 !text-emerald-950 hover:!text-emerald-800 transition">
         <motion.span variants={iconVariants} animate="animate">
         <FaEnvelope className="text-xl !m-5" />
         </motion.span>
@@ -65,7 +65,7 @@ export default function Contact() {
       </a>
 
       {/* LinkedIn */}
-      <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-500 transition">
+      <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 !text-emerald-950 hover:!text-emerald-800 transition">
         <motion.span variants={iconVariants} animate="animate">
         <FaLinkedin className="text-xl !m-5" />
         </motion.span>
@@ -73,7 +73,7 @@ export default function Contact() {
       </a>
 
       {/* GitHub */}
-      <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-gray-400 transition">
+      <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 !text-emerald-950 hover:!text-emerald-800 transition">
         <motion.span variants={iconVariants} animate="animate">
         <FaGithub className="text-xl !m-5" />
         </motion.span>

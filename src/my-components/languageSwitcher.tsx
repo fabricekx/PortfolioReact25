@@ -6,7 +6,7 @@ const LanguageSwitcher = () => {
   return (
     <div className="hide-cursor">
       <select
-        className="hide-cursor bg-blue-950 text-white p-2 mb-2 border border-gray-700 rounded"
+        className="hide-cursor bg-emerald-950 text-white p-2 mb-2 border border-gray-700 rounded"
         value={i18n.language}
         onChange={(e) => i18n.changeLanguage(e.target.value)}
       >
