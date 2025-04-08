@@ -11,8 +11,12 @@ import LanguageSwitcher from "./my-components/languageSwitcher";
 import "flag-icon-css/css/flag-icons.min.css";
 
 const App = () => {
-  const { t } = useTranslation(); // Hook pour accéder aux traductions
+  const { t, i18n } = useTranslation(); // Hook pour accéder aux traductions
   const location = useLocation(); // Récupérer l'URL actuelle pour styliser le lien actuel
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]); // s'exécute à chaque changement de langue
 
   // pour le curseur perso, avec la classe custom-cursor
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
