@@ -211,7 +211,7 @@ const App = () => {
                 </Link>
               </li>
               <li
-                className="text-center"
+                className="text-center !mt-2"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsHovering(false);
@@ -227,7 +227,7 @@ const App = () => {
                 </Link>
               </li>
               <li
-                className="text-center"
+                className="text-center !mt-2"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsHovering(false);
@@ -243,7 +243,7 @@ const App = () => {
                 </Link>
               </li>
               <li
-                className="text-center !mb-3"
+                className="text-center !mt-2 !mb-3"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsHovering(false);
@@ -265,7 +265,7 @@ const App = () => {
 
       {/* Zone principale qui change selon la page */}
       
-      <div id="maDivScrollable" className="flex-1 justify-center align-middle !p-10 bg-gray-900 text-white overflow-x-hidden overflow-y-auto max-h-screen">
+      <div id="maDivScrollable" className="flex-1 justify-center align-middle !p-5 bg-gray-900 text-white overflow-x-hidden overflow-y-auto max-h-screen">
         <Routes>
           <Route path="/" element={<Home setIsHovering={setIsHovering} />} />
           <Route

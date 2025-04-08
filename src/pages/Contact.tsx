@@ -25,8 +25,9 @@ export default function Contact() {
     },
   };
     return (
-      <div className="h-full flex flex-col items-center justify-center text-center">
+      <div className="h-full flex flex-col items-center justify-evenly text-center">
         <motion.h1 
+        className="!text-3xl  md:!text-4xl"
         animate={{
           opacity: 1,
           y: 0,

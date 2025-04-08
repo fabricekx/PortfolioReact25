@@ -69,7 +69,7 @@ const inline = true
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
       <div className="md:fixed bg-gray-900 !me-10 !pt-5 top-0 z-1">
         <motion.h1 
-        className="!text-3xl md:!text-4xl !mb-4"
+        className="!text-3xl text-center md:!text-4xl !mb-4 "
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
@@ -89,7 +89,7 @@ const inline = true
         <motion.p  initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center !pe-5">{t("aboutMe")}
+              className="text-justify !ps-5 ">{t("aboutMe")}
               </motion.p>
 <NavAbout setIsHovering={setIsHovering}/>
       
