@@ -63,7 +63,7 @@ const App = () => {
           >
             Fabrice Hendrikx
           </motion.h1>
-          <p className="text-gray-400 !text-2xl sm:text-3xl !mt-2">
+          <p className="text-gray-400 !text-xl sm:!text-2xl !mt-2">
             Full Stack Developper
           </p>
           <p className="text-gray-400">{t("description")}</p>
@@ -76,7 +76,7 @@ const App = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="!mt-8 sidebar"
         >
-          <ul className="!space-y-4">
+          <ul className="!space-y-4 !ml-10">
             {/* Création des liens à partir d'un tableau */}
             {[
               { path: "/", label: t("home"), icon: "🏠" },
@@ -87,7 +87,7 @@ const App = () => {
               <li key={item.path} className="relative">
                 <Link
                   to={item.path}
-                  className="interactive-area hide-cursor hover:text-gray-300 relative"
+                  className="interactive-area hide-cursor !text-2xl hover:text-gray-300 relative"
                   onMouseEnter={() => setIsHovering(true)} // modification du pointer
                   onMouseLeave={() => setIsHovering(false)}
                 >
@@ -123,7 +123,7 @@ const App = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="hide-cursor w-1/4"
+          className="hide-cursor w-1/4 !m-5"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
@@ -131,9 +131,9 @@ const App = () => {
         </motion.div>
 
         {/* Technos utiisées */}
-        <p className="text-gray-500 text-tiny md:text-sm">{t("techno")}</p>
+        <p className="text-gray-500 !text-tiny md:!text-sm">{t("techno")}</p>
         {/* Social Links */}
-        <div className="mt-8 flex space-x-4 justify-evenly">
+        <div className="!mt-8 flex !space-x-4 justify-evenly">
           <a
             href="https://github.com/fabricekx"
             target="_blank"
@@ -174,7 +174,7 @@ const App = () => {
       {/* Mobile Sidebar */}
       <AnimatePresence>
         {isMenuOpen && (
-          <div className="fixed right- top-5  w-2/3 bg-opacity-90 p-6 lg:hidden z-50">
+          <div className="fixed right- top-5  w-2/3 bg-opacity-90 !p-6 lg:hidden z-50">
             <button
               className="fixed !bg-gray-300 right-6 top-6 text-black text-2xl"
               onClick={() => setIsMenuOpen(false)}
@@ -183,7 +183,7 @@ const App = () => {
             </button>
 
             <motion.ul
-              className="mt-7 fixed right-3 space-y-6 w-1/4 rounded-md text-white font-medium bg-blue-950/90"
+              className="!mt-7 fixed right-3 space-y-6 w-1/4 rounded-md text-white !font-medium bg-blue-950/90"
               initial="hidden"
               animate="visible"
               exit="exit"
@@ -195,7 +195,7 @@ const App = () => {
               }}
             >
               <li
-                className="text-center mt-2"
+                className="text-center !mt-2"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsHovering(false);
@@ -243,7 +243,7 @@ const App = () => {
                 </Link>
               </li>
               <li
-                className="text-center mb-3"
+                className="text-center !mb-3"
                 onClick={() => {
                   setIsMenuOpen(false);
                   setIsHovering(false);
@@ -251,7 +251,7 @@ const App = () => {
               >
                 <Link
                   to="/contact"
-                  className="hide-cursor hover:text-gray-300 mb-3"
+                  className="hide-cursor hover:text-gray-300 !mb-3"
                   onMouseEnter={() => setIsHovering(true)}
                   onMouseLeave={() => setIsHovering(false)}
                 >
@@ -265,7 +265,7 @@ const App = () => {
 
       {/* Zone principale qui change selon la page */}
       
-      <div id="maDivScrollable" className="flex-1 justify-center align-middle p-10 bg-gray-900 text-white overflow-x-hidden overflow-y-auto max-h-screen">
+      <div id="maDivScrollable" className="flex-1 justify-center align-middle !p-10 bg-gray-900 text-white overflow-x-hidden overflow-y-auto max-h-screen">
         <Routes>
           <Route path="/" element={<Home setIsHovering={setIsHovering} />} />
           <Route

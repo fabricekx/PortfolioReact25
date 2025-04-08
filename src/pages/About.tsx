@@ -69,7 +69,7 @@ const inline = true
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
       <div className="md:fixed bg-gray-900 !me-10 !pt-5 top-0 z-1">
         <motion.h1 
-        className="!text-3xl md:!text-4xl"
+        className="!text-3xl md:!text-4xl !mb-4"
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
