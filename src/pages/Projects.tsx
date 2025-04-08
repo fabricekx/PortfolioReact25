@@ -55,7 +55,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
     <div className="h-full flex flex-col items-center  text-center">
       {/* div titre */}
       <motion.h1
-        className="!text-3xl width-1/2 md:!text-4xl md:fixed w-1/2 !me-10 bg-gray-900 top-0 left-30px right-15px z-50 !p-4 font-bold"
+        className="!text-3xl  md:!text-4xl width-1/2 md:fixed w-1/2 !me-10 bg-gray-900 top-0 left-30px right-15px z-50 !p-4 font-bold"
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
@@ -77,7 +77,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
       </motion.h1>
 
       {/* div contenant toutes les cartes */}
-      <div className="!p-6 !space-y-6 !pt-24">
+      <div className="!p-6 !space-y-6 md:!pt-24 !pt-6">
         {/* Une seule carte par ligne avec espacement */}
         {projects.map((project) => {
           // Récupère l'image en format "small" si dispo, sinon l'image originale
