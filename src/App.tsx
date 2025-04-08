@@ -52,7 +52,7 @@ const App = () => {
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       />
       {/* Sidebar */}
-      <div className="small  w-2/5 bg-emerald-800 text-white !p-6 flex flex-col justify-evenly">
+      <div className="small  w-2/5 bg-emerald-800 text-white !p-3 flex flex-col justify-evenly">
         {/* Nom & Présentation */}
         <motion.div
           initial={{ x: -100, opacity: 0 }} // Commence hors de l'écran à gauche
@@ -135,9 +135,9 @@ const App = () => {
         </motion.div>
 
         {/* Technos utiisées */}
-        <p className="text-emerald-950 !text-tiny md:!text-sm">{t("techno")}</p>
+        <p className="text-emerald-950 hidden sm:block !text-tiny md:!text-sm">{t("techno")}</p>
         {/* Social Links */}
-        <div className="!mt-8 flex !space-x-4 justify-evenly">
+        <div className=" mt-2 md:!mt-8 flex !space-x-4 justify-evenly">
           <a
             href="https://github.com/fabricekx"
             target="_blank"
