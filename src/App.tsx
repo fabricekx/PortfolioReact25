@@ -47,12 +47,12 @@ const App = () => {
           scale: isHovering ? 2 : 1, // Agrandit si hover
           backgroundColor: isHovering
             ? "rgba(0,115,230,0.5)"
-            : "rgba(131, 154, 247, 0.03)",
+            : "rgba(184, 197, 245, 0.2)",
         }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
       />
       {/* Sidebar */}
-      <div className="small  w-2/5 bg-gray-900 text-white !p-6 flex flex-col justify-evenly">
+      <div className="small  w-2/5 bg-emerald-800 text-white !p-6 flex flex-col justify-evenly">
         {/* Nom & Présentation */}
         <motion.div
           initial={{ x: -100, opacity: 0 }} // Commence hors de l'écran à gauche
@@ -91,7 +91,7 @@ const App = () => {
               <li key={item.path} className="relative">
                 <Link
                   to={item.path}
-                  className="interactive-area hide-cursor !text-2xl hover:text-gray-300 relative"
+                  className="interactive-area hide-cursor !text-2xl !text-emerald-950 hover:text-gray-300 relative"
                   onMouseEnter={() => setIsHovering(true)} // modification du pointer
                   onMouseLeave={() => setIsHovering(false)}
                 >
@@ -100,7 +100,7 @@ const App = () => {
                 {location.pathname === item.path && ( // si le chemin correspond à la page en cours, on ajoute une ligne avec une animation
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 bottom-0 w-1/2 !h-[2px] bg-blue-500"
+                    className="absolute left-0 bottom-0 w-1/2 !h-[2px] bg-emerald-900"
                     initial={{ width: 0 }}
                     animate={{
                       width: "100px",
@@ -135,7 +135,7 @@ const App = () => {
         </motion.div>
 
         {/* Technos utiisées */}
-        <p className="text-gray-500 !text-tiny md:!text-sm">{t("techno")}</p>
+        <p className="text-emerald-950 !text-tiny md:!text-sm">{t("techno")}</p>
         {/* Social Links */}
         <div className="!mt-8 flex !space-x-4 justify-evenly">
           <a
@@ -269,7 +269,7 @@ const App = () => {
 
       {/* Zone principale qui change selon la page */}
       
-      <div id="maDivScrollable" className="flex-1 justify-center align-middle !p-5 bg-gray-900 text-white overflow-x-hidden overflow-y-auto max-h-screen">
+      <div id="maDivScrollable" className="flex-1 justify-center align-middle !p-5 bg-emerald-600 text-white overflow-x-hidden overflow-y-auto max-h-screen">
         <Routes>
           <Route path="/" element={<Home setIsHovering={setIsHovering} />} />
           <Route

@@ -67,7 +67,7 @@ const inline = true
   return (
     <div className="w-full overflow-x-auto">
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
-      <div className="md:fixed bg-gray-900 !me-10 !pt-5 top-0 z-1">
+      <div className="md:fixed bg-emerald-600 !me-10 !pt-5 top-0 z-1">
         <motion.h1 
         className="!text-3xl text-center md:!text-4xl !mb-4 "
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
@@ -106,7 +106,7 @@ const inline = true
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="hover:scale-105 border-0 transition-transform bg-gray-800 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
+            <Card className="hover:scale-105 border-0 transition-transform bg-emerald-950 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
               <div className=" md:w-1/3  object-cover rounded-lg">
                 <div className="text-gray-600"> {experience.date} </div>
                 <div className="text-gray-600 font-bold">
@@ -141,7 +141,7 @@ const inline = true
 
         {formations.map((formation) => {
           return (
-            <Card  key={formation.id} className="hover:scale-105 border-0 transition-transform bg-gray-800 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
+            <Card  key={formation.id} className="hover:scale-105 border-0 transition-transform bg-emerald-950 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
               <div className=" md:w-1/3  object-cover rounded-lg">
                 <div className="text-gray-600"> {formation.date} </div>
                 <div className="text-gray-600 font-bold">

@@ -54,7 +54,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
       >
         <Link
           to="/projects"
-          className="interactive-area hide-cursor !mt-8 !px-6 !py-3 bg-blue-900 text-white rounded-lg shadow-lg hover:bg-blue-600 transition"
+          className="interactive-area hide-cursor !mt-8 !px-6 !py-3 bg-emerald-900 text-white rounded-lg shadow-lg hover:bg-blue-600 transition"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
           onClick={() => setIsHovering(false)}
