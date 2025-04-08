@@ -51,7 +51,7 @@ export default function Contact() {
       {/* Téléphone */}
       <a href={`tel:${phone}`} className="flex items-center space-x-2 hover:text-blue-500 transition">
         <motion.span variants={iconVariants} animate="animate">
-        <FaPhone className="text-xl" />
+        <FaPhone className="text-xl !m-5" />
         </motion.span>
         <span>{phone}</span>
       </a>
@@ -59,7 +59,7 @@ export default function Contact() {
       {/* Email */}
       <a href={`mailto:${email}`} className="flex items-center space-x-2 hover:text-blue-500 transition">
         <motion.span variants={iconVariants} animate="animate">
-        <FaEnvelope className="text-xl" />
+        <FaEnvelope className="text-xl !m-5" />
         </motion.span>
         <span>{email}</span>
       </a>
@@ -67,7 +67,7 @@ export default function Contact() {
       {/* LinkedIn */}
       <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-500 transition">
         <motion.span variants={iconVariants} animate="animate">
-        <FaLinkedin className="text-xl" />
+        <FaLinkedin className="text-xl !m-5" />
         </motion.span>
         <span>LinkedIn</span>
       </a>
@@ -75,7 +75,7 @@ export default function Contact() {
       {/* GitHub */}
       <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-gray-400 transition">
         <motion.span variants={iconVariants} animate="animate">
-        <FaGithub className="text-xl" />
+        <FaGithub className="text-xl !m-5" />
         </motion.span>
         <span>GitHub</span>
       </a>
