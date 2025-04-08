@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 /* @import "flag-icon-css/css/flag-icon.min.css"; */
@@ -5,11 +11,7 @@
 
 /* @custom-variant dark (&:is(.dark *)); */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
