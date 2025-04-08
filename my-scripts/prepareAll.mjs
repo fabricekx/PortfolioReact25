@@ -4,10 +4,10 @@ import { promisify } from 'util';
 const run = promisify(exec);
 
 const scripts = [
-  'node ./scripts/prepareExperiences.mjs',
-  'node ./scripts/prepareProjects.mjs',
-  'node ./scripts/prepareFormations.mjs',
-  'node ./scripts/prepareImages.mjs',
+  'node ./my-scripts/prepareExperiences.mjs',
+  'node ./my-scripts/prepareProjects.mjs',
+  'node ./my-scripts/prepareFormations.mjs',
+  'node ./my-scripts/prepareImages.mjs',
 ];
 if (process.env.VERCEL === '1') {
   console.log("🛑 Skipping prepareAll.mjs on Vercel");
