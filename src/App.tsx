@@ -59,11 +59,11 @@ const App = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="  !text-lg sm:!text-5xl"
+            className="  !text-3xl sm:!text-4xl"
           >
             Fabrice Hendrikx
           </motion.h1>
-          <p className="text-gray-400 text-lg sm:text-3xl !mt-2">
+          <p className="text-gray-400 !text-2xl sm:text-3xl !mt-2">
             Full Stack Developper
           </p>
           <p className="text-gray-400">{t("description")}</p>

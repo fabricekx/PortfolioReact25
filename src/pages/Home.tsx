@@ -15,6 +15,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
   return (
     <div className="h-full flex flex-col items-center justify-center text-center">
       <motion.h1
+      className="!text-3xl md:!text-4xl"
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
