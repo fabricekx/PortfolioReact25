@@ -13,9 +13,9 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
    
 
   return (
-    <div className="h-full flex flex-col items-center justify-evenly text-justify">
+    <div className="h-full flex flex-col items-center justify-evenly ">
       <motion.h1
-      className="!text-3xl md:!text-4xl"
+      className="!text-3xl md:!text-4xl text-center"
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
         animate={{
           opacity: 1,
@@ -36,7 +36,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
         {t("welcome")}
       </motion.h1>
       <motion.p
-        className="!m-4 !text-lg md:!text-xl text-gray-300 max-w-2xl"
+        className="!m-4 !text-lg md:!text-xl text-justify text-gray-300 max-w-2xl"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
