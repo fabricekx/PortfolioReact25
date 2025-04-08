@@ -160,61 +160,61 @@
     ]
   },
   {
-    "id": 45,
-    "documentId": "zjwvn1pbb0w04bua3ydlc0wk",
-    "Title": "Musical Game",
-    "Description": "Little musical game in JS",
-    "Link": "https://fabricekx.github.io/Music-en-jquery/",
-    "createdAt": "2025-04-01T13:08:53.996Z",
-    "updatedAt": "2025-04-07T11:35:57.334Z",
-    "publishedAt": "2025-04-07T11:35:57.394Z",
-    "TitleFr": "Jeu musical",
-    "DescriptionFr": "Petit jeu musical en JS",
+    "id": 43,
+    "documentId": "cyjchjafj28c37xoidxr5k8j",
+    "Title": "LMS",
+    "Description": "An LMS (Learning Management System) is a tool that allows learners and trainers to track the progress of their learning. The back-end part allows trainers to add content (assessments, courses, etc.)",
+    "Link": "https://www.mon-lms.com/",
+    "createdAt": "2025-04-01T18:30:20.608Z",
+    "updatedAt": "2025-04-07T11:34:46.760Z",
+    "publishedAt": "2025-04-07T11:34:46.824Z",
+    "TitleFr": "LMS",
+    "DescriptionFr": "Un LMS (Learning Management System) est un outil permettant aux apprenants et aux formateurs de suivre la progression de leur apprentissage. Le back-end permet aux formateurs d'ajouter du contenu (évaluations, formations, etc.).",
     "Picture": {
-      "id": 2,
-      "documentId": "qjv1j4059z6atwyvsdlrl8bg",
-      "name": "batterie.jpg",
+      "id": 5,
+      "documentId": "hu5so72p0ica2pq2dt3xav05",
+      "name": "lms.jpg",
       "alternativeText": null,
       "caption": null,
-      "width": 600,
-      "height": 400,
+      "width": 722,
+      "height": 432,
       "formats": {
         "thumbnail": {
-          "name": "thumbnail_batterie.jpg",
-          "hash": "thumbnail_batterie_4e975ac322",
+          "name": "thumbnail_lms.jpg",
+          "hash": "thumbnail_lms_bc6bd0646d",
           "ext": ".jpg",
           "mime": "image/jpeg",
           "path": null,
-          "width": 234,
-          "height": 156,
-          "size": 9.25,
-          "sizeInBytes": 9250,
-          "url": "/uploads/thumbnail_batterie_4e975ac322.jpg"
+          "width": 245,
+          "height": 147,
+          "size": 10.15,
+          "sizeInBytes": 10152,
+          "url": "/uploads/thumbnail_lms_bc6bd0646d.jpg"
         },
         "small": {
-          "name": "small_batterie.jpg",
-          "hash": "small_batterie_4e975ac322",
+          "name": "small_lms.jpg",
+          "hash": "small_lms_bc6bd0646d",
           "ext": ".jpg",
           "mime": "image/jpeg",
           "path": null,
           "width": 500,
-          "height": 333,
-          "size": 29.28,
-          "sizeInBytes": 29279,
-          "url": "/uploads/small_batterie_4e975ac322.jpg"
+          "height": 299,
+          "size": 27.58,
+          "sizeInBytes": 27584,
+          "url": "/uploads/small_lms_bc6bd0646d.jpg"
         }
       },
-      "hash": "batterie_4e975ac322",
+      "hash": "lms_bc6bd0646d",
       "ext": ".jpg",
       "mime": "image/jpeg",
-      "size": 39.65,
-      "url": "/uploads/batterie_4e975ac322.jpg",
+      "size": 44.85,
+      "url": "/uploads/lms_bc6bd0646d.jpg",
       "previewUrl": null,
       "provider": "local",
       "provider_metadata": null,
-      "createdAt": "2025-04-01T18:09:34.534Z",
-      "updatedAt": "2025-04-01T18:09:34.534Z",
-      "publishedAt": "2025-04-01T18:09:34.536Z"
+      "createdAt": "2025-04-01T18:22:15.263Z",
+      "updatedAt": "2025-04-01T18:29:02.846Z",
+      "publishedAt": "2025-04-01T18:22:15.264Z"
     },
     "technos": [
       {
@@ -226,32 +226,32 @@
         "publishedAt": "2025-04-04T11:43:38.940Z"
       },
       {
-        "id": 4,
-        "documentId": "u17wgsqs5r55oy5qcmvzxom2",
-        "Technos": "HTML",
-        "createdAt": "2025-04-04T11:43:58.182Z",
-        "updatedAt": "2025-04-04T11:44:01.051Z",
-        "publishedAt": "2025-04-04T11:44:01.120Z"
+        "id": 22,
+        "documentId": "p1v0hkx1q6n3071z0v7tymjo",
+        "Technos": "PHP",
+        "createdAt": "2025-04-04T12:02:15.041Z",
+        "updatedAt": "2025-04-04T12:02:17.710Z",
+        "publishedAt": "2025-04-04T12:02:17.746Z"
       },
       {
-        "id": 9,
-        "documentId": "iu6n7nfda91raivn38apbg1r",
-        "Technos": "JS",
-        "createdAt": "2025-04-04T11:44:35.545Z",
-        "updatedAt": "2025-04-04T11:44:50.564Z",
-        "publishedAt": "2025-04-04T11:44:50.587Z"
+        "id": 20,
+        "documentId": "zz7hsntssxpdfrazx7d9nu0e",
+        "Technos": "Symfony",
+        "createdAt": "2025-04-04T12:01:35.604Z",
+        "updatedAt": "2025-04-04T12:01:53.535Z",
+        "publishedAt": "2025-04-04T12:01:53.585Z"
       }
     ]
   },
   {
-    "id": 46,
+    "id": 44,
     "documentId": "y528x93viobx8drwxu52gyvt",
     "Title": "Marine weather Forecast",
     "Description": "Marine weather from data provided by Meteo France (Arôme model), formatted in the form of graphs",
-    "Link": "https://meteo-react-chi.vercel.app/",
+    "Link": "https://meteo-react-liosithng-fabrices-projects-43ae4b68.vercel.app/",
     "createdAt": "2025-04-01T13:09:19.813Z",
-    "updatedAt": "2025-04-08T12:48:22.927Z",
-    "publishedAt": "2025-04-08T12:48:22.996Z",
+    "updatedAt": "2025-04-07T11:35:24.347Z",
+    "publishedAt": "2025-04-07T11:35:24.415Z",
     "TitleFr": "Météo marine",
     "DescriptionFr": "Météo Marine à partir des données fournies par Meteo France (modèle Arôme) , mises en forme sous forme de graphiques",
     "Picture": {
@@ -352,85 +352,61 @@
     ]
   },
   {
-    "id": 47,
-    "documentId": "cyjchjafj28c37xoidxr5k8j",
-    "Title": "LMS",
-    "Description": "An LMS (Learning Management System) is a tool that allows learners and trainers to track the progress of their learning. The back-end part allows trainers to add content (assessments, courses, etc.)",
-    "Link": "https://www.mon-lms.com/",
-    "createdAt": "2025-04-01T18:30:20.608Z",
-    "updatedAt": "2025-04-08T12:55:40.384Z",
-    "publishedAt": "2025-04-08T12:55:40.441Z",
-    "TitleFr": "LMS",
-    "DescriptionFr": "Un LMS (Learning Management System) est un outil permettant aux apprenants et aux formateurs de suivre la progression de leur apprentissage. Le back-end permet aux formateurs d'ajouter du contenu (évaluations, formations, etc.).",
+    "id": 45,
+    "documentId": "zjwvn1pbb0w04bua3ydlc0wk",
+    "Title": "Musical Game",
+    "Description": "Little musical game in JS",
+    "Link": "https://fabricekx.github.io/Music-en-jquery/",
+    "createdAt": "2025-04-01T13:08:53.996Z",
+    "updatedAt": "2025-04-07T11:35:57.334Z",
+    "publishedAt": "2025-04-07T11:35:57.394Z",
+    "TitleFr": "Jeu musical",
+    "DescriptionFr": "Petit jeu musical en JS",
     "Picture": {
-      "id": 6,
-      "documentId": "awn9be29a92eqqtb226owgsl",
-      "name": "lms2.jpg",
+      "id": 2,
+      "documentId": "qjv1j4059z6atwyvsdlrl8bg",
+      "name": "batterie.jpg",
       "alternativeText": null,
       "caption": null,
-      "width": 8000,
-      "height": 6000,
+      "width": 600,
+      "height": 400,
       "formats": {
         "thumbnail": {
-          "name": "thumbnail_lms2.jpg",
-          "hash": "thumbnail_lms2_e4485ffe52",
+          "name": "thumbnail_batterie.jpg",
+          "hash": "thumbnail_batterie_4e975ac322",
           "ext": ".jpg",
           "mime": "image/jpeg",
           "path": null,
-          "width": 208,
+          "width": 234,
           "height": 156,
-          "size": 4.53,
-          "sizeInBytes": 4529,
-          "url": "/uploads/thumbnail_lms2_e4485ffe52.jpg"
-        },
-        "medium": {
-          "name": "medium_lms2.jpg",
-          "hash": "medium_lms2_e4485ffe52",
-          "ext": ".jpg",
-          "mime": "image/jpeg",
-          "path": null,
-          "width": 750,
-          "height": 563,
-          "size": 26.17,
-          "sizeInBytes": 26171,
-          "url": "/uploads/medium_lms2_e4485ffe52.jpg"
+          "size": 9.25,
+          "sizeInBytes": 9250,
+          "url": "/uploads/thumbnail_batterie_4e975ac322.jpg"
         },
         "small": {
-          "name": "small_lms2.jpg",
-          "hash": "small_lms2_e4485ffe52",
+          "name": "small_batterie.jpg",
+          "hash": "small_batterie_4e975ac322",
           "ext": ".jpg",
           "mime": "image/jpeg",
           "path": null,
           "width": 500,
-          "height": 375,
-          "size": 15.32,
-          "sizeInBytes": 15321,
-          "url": "/uploads/small_lms2_e4485ffe52.jpg"
-        },
-        "large": {
-          "name": "large_lms2.jpg",
-          "hash": "large_lms2_e4485ffe52",
-          "ext": ".jpg",
-          "mime": "image/jpeg",
-          "path": null,
-          "width": 1000,
-          "height": 750,
-          "size": 39.66,
-          "sizeInBytes": 39664,
-          "url": "/uploads/large_lms2_e4485ffe52.jpg"
+          "height": 333,
+          "size": 29.28,
+          "sizeInBytes": 29279,
+          "url": "/uploads/small_batterie_4e975ac322.jpg"
         }
       },
-      "hash": "lms2_e4485ffe52",
+      "hash": "batterie_4e975ac322",
       "ext": ".jpg",
       "mime": "image/jpeg",
-      "size": 732.62,
-      "url": "/uploads/lms2_e4485ffe52.jpg",
+      "size": 39.65,
+      "url": "/uploads/batterie_4e975ac322.jpg",
       "previewUrl": null,
       "provider": "local",
       "provider_metadata": null,
-      "createdAt": "2025-04-08T12:55:03.622Z",
-      "updatedAt": "2025-04-08T12:55:03.622Z",
-      "publishedAt": "2025-04-08T12:55:03.624Z"
+      "createdAt": "2025-04-01T18:09:34.534Z",
+      "updatedAt": "2025-04-01T18:09:34.534Z",
+      "publishedAt": "2025-04-01T18:09:34.536Z"
     },
     "technos": [
       {
@@ -442,20 +418,20 @@
         "publishedAt": "2025-04-04T11:43:38.940Z"
       },
       {
-        "id": 22,
-        "documentId": "p1v0hkx1q6n3071z0v7tymjo",
-        "Technos": "PHP",
-        "createdAt": "2025-04-04T12:02:15.041Z",
-        "updatedAt": "2025-04-04T12:02:17.710Z",
-        "publishedAt": "2025-04-04T12:02:17.746Z"
+        "id": 4,
+        "documentId": "u17wgsqs5r55oy5qcmvzxom2",
+        "Technos": "HTML",
+        "createdAt": "2025-04-04T11:43:58.182Z",
+        "updatedAt": "2025-04-04T11:44:01.051Z",
+        "publishedAt": "2025-04-04T11:44:01.120Z"
       },
       {
-        "id": 20,
-        "documentId": "zz7hsntssxpdfrazx7d9nu0e",
-        "Technos": "Symfony",
-        "createdAt": "2025-04-04T12:01:35.604Z",
-        "updatedAt": "2025-04-04T12:01:53.535Z",
-        "publishedAt": "2025-04-04T12:01:53.585Z"
+        "id": 9,
+        "documentId": "iu6n7nfda91raivn38apbg1r",
+        "Technos": "JS",
+        "createdAt": "2025-04-04T11:44:35.545Z",
+        "updatedAt": "2025-04-04T11:44:50.564Z",
+        "publishedAt": "2025-04-04T11:44:50.587Z"
       }
     ]
   }

@@ -1,0 +1,41 @@
+[
+  {
+    "id": 2,
+    "documentId": "yz2ryu0tuetjfhdt21w60oo9",
+    "date": "1993-1998",
+    "etablissement": "ULg - AgrobioTech",
+    "diplome": "Ingénieur agronome",
+    "diplomeEn": "Agricultural engineer",
+    "description": "Grade d'ingénieur Agronome obtenu avec mention dans la spécialité Eaux et Forêt",
+    "descriptionEn": "Grade of Agricultural Engineer obtained with distinction in the Water and Forestry specialty",
+    "createdAt": "2025-04-04T12:07:00.605Z",
+    "updatedAt": "2025-04-04T12:07:03.493Z",
+    "publishedAt": "2025-04-04T12:07:03.518Z"
+  },
+  {
+    "id": 4,
+    "documentId": "uypogr84af9f334o2e5p3ooo",
+    "date": "2002-2003",
+    "etablissement": "Faculté de Droit de Montpellier",
+    "diplome": "Niveau Master Droit de l'Environnement",
+    "diplomeEn": "Master's level in Environmental Law",
+    "description": "Master spécialisé en droit de l'environnement",
+    "descriptionEn": "Specialized Master's degree in environmental law",
+    "createdAt": "2025-04-04T12:07:48.295Z",
+    "updatedAt": "2025-04-04T12:07:50.898Z",
+    "publishedAt": "2025-04-04T12:07:50.914Z"
+  },
+  {
+    "id": 6,
+    "documentId": "c2qwr3g0cakic6x5m7urfdg9",
+    "date": "2023-2024",
+    "etablissement": "AFPA Cannes",
+    "diplome": "Titre Professionnel DWWM",
+    "diplomeEn": "DWWM Professional Title",
+    "description": "Formation professionnalisante en Développement Web et Web Mobile",
+    "descriptionEn": "Professional training in Web and Mobile Web Development",
+    "createdAt": "2025-04-04T12:08:45.885Z",
+    "updatedAt": "2025-04-04T12:08:49.350Z",
+    "publishedAt": "2025-04-04T12:08:49.361Z"
+  }
+]
