@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import fallbackProjects from '../my-json/projects-strapi.json' ; // Chemin relatif à `src`
 import ProjectCard from "@/my-components/projectCard";
+import ScrollUp from "@/my-components/scrollUpIcon";
+import ScrollDown from "@/my-components/scrollDownIcon";
 
 interface ProjectsProps {
   setIsHovering: (hovering: boolean) => void;
@@ -50,6 +52,8 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
  
 
   return (
+    <div><ScrollUp></ScrollUp>
+<ScrollDown></ScrollDown>
     <div className="h-full flex flex-col items-center  text-center">
       {/* div titre */}
       <motion.h1
@@ -85,6 +89,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };
