@@ -19,6 +19,7 @@ import fallbackFormations from '../my-json/formations-strapi.json'; // Chemin re
 import fallbackExperiences from '../my-json/experiences-strapi.json'; // Chemin relatif à `src`
 import ScrollDown from "@/my-components/scrollDownIcon";
 import ScrollUp from "@/my-components/scrollUpIcon";
+import ExperienceCard from "@/my-components/experienceCard";
 
 interface AboutProps {
   setIsHovering: (hovering: boolean) => void;
@@ -67,10 +68,10 @@ const inline = true
 
  
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full overflow-x-auto flex-col align-middle">
       <ScrollUp></ScrollUp>
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
-      <div className="md:fixed bg-emerald-600 !me-10 !pt-5 top-0 z-1">
+      <div className="md:fixed bg-emerald-600  !pt-5 top-0 z-1">
         <motion.h1 
         className="!text-3xl text-center md:!text-4xl !mb-4 "
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
@@ -104,40 +105,7 @@ const inline = true
 
         {experiences.map((experience) => {
           return (
-          <motion.div
-            key={experience.id}
-            // le whileInView ne rend pas ma première carte lors du chargement, il faut donc le forcer
-            initial={ { opacity: 0, x: -150 }}
-            animate={{ opacity: 1, x:0 }}
-
-            transition={{ duration: 0.5 }}
-          >
-            <Card className="hover:scale-105 border-0 transition-transform bg-emerald-950 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
-              <div className=" md:w-1/3  object-cover rounded-lg">
-                <div className="text-gray-600"> {experience.date} </div>
-                <div className="text-gray-600 font-bold">
-                  {experience.entreprise}
-                </div>
-                <div className="text-gray-600">{experience.place}</div>
-              </div>
-              <div className="flex flex-col  justify-between h-full w-full">
-                <CardHeader className="flex-grow w-full">
-                  <CardTitle className="text-white">
-                    {" "}
-                    {i18n.language === "fr"
-                      ? experience.poste
-                      : experience.posteEN}
-                  </CardTitle>
-                  <CardDescription>
-                    {" "}
-                    {i18n.language === "fr"
-                      ? experience.description
-                      : experience.descriptionEn}
-                  </CardDescription>
-                </CardHeader>
-              </div>
-            </Card>
-            </motion.div>
+          <ExperienceCard key={experience.id} setIsHovering={setIsHovering} experience={experience}></ExperienceCard>
           );
         })}
       </section>

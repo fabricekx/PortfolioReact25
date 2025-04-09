@@ -53,9 +53,9 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
       </motion.p>
       <motion.div
       className="!mb-5"
-       animate={{ opacity: [0.7, 1, 0.7] }}
+       animate={{ opacity: [0.7, 1, 1,0.7], x: [0,5,5,0,0], y: [0,0,5,5,0]  }}
        transition={{
-         duration: 2,
+         duration: 3,
          repeat: Infinity,
          repeatType: "loop",
          ease: "easeInOut",
