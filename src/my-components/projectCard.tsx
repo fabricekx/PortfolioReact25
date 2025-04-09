@@ -83,6 +83,7 @@ const ProjectCard: React.FC<ProjectCardProps>  =({project, setIsHovering}) =>{
             </div>
           </CardHeader>
           <CardContent className="!mt-auto !m-2">
+            {isVisible &&  // je ne met le lien que si la carte est visible, pour éviter les clicks fantômes
             <motion.a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -96,7 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps>  =({project, setIsHovering}) =>{
               onClick={() => setIsHovering(false)}
             >
               {t("showProject")}
-            </motion.a>
+            </motion.a>}
           </CardContent>
         </div>
       </Card>

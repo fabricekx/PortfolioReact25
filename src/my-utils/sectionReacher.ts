@@ -46,7 +46,7 @@ const useSectionReacher = () => {
           setIsVisible(entry.isIntersecting);
         });
       },
-      { threshold: 0.4 } // Déclenche l'animation quand 40% de la section est visible
+      { threshold: 0.2 } // Déclenche l'animation quand 30% de la section est visible
     );
 
     if (ref.current) observer.observe(ref.current);
