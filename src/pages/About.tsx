@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
+
 import {
   Card,
   CardHeader,
@@ -55,7 +56,6 @@ const inline = true
   useEffect(() => {
     if (inline) {
       setFormations(fallbackFormations);
-      console.log(fallbackExperiences);
       setExperiences(fallbackExperiences);
     } else {
       fetchFormations().then(setFormations).catch(console.error);
@@ -63,7 +63,7 @@ const inline = true
     }
   }, []);
 
-  
+ 
   return (
     <div className="w-full overflow-x-auto">
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
@@ -102,8 +102,10 @@ const inline = true
           return (
           <motion.div
             key={experience.id}
-            initial={{ opacity: 0, x: 150 }}
-            animate={{ opacity: 1, x: 0 }}
+            // le whileInView ne rend pas ma première carte lors du chargement, il faut donc le forcer
+            initial={ { opacity: 0, x: -150 }}
+            animate={{ opacity: 1, x:0 }}
+
             transition={{ duration: 0.5 }}
           >
             <Card className="hover:scale-105 border-0 transition-transform bg-emerald-950 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
@@ -141,6 +143,13 @@ const inline = true
 
         {formations.map((formation) => {
           return (
+            <motion.div
+            key={formation.id}
+            initial={ { opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x:0 }}
+
+            transition={{ duration: 0.5 }}
+          >
             <Card  key={formation.id} className="hover:scale-105 border-0 transition-transform bg-emerald-950 hover:bg-gray-700 flex flex-col md:flex-row items-start !p-4 w-full">
               <div className=" md:w-1/3  object-cover rounded-lg">
                 <div className="text-gray-600"> {formation.date} </div>
@@ -165,6 +174,7 @@ const inline = true
                 </CardHeader>
               </div>
             </Card>
+            </motion.div>
           );
         })}
       </section>
@@ -173,8 +183,14 @@ const inline = true
 <Skills></Skills>
 
 <Langues></Langues>
-<div className="h-10"></div>
+
+<motion.div
+initial={ { opacity: 0, x: -150 }}
+whileInView={{ opacity: 1, x:0 }}
+transition={{ duration: 0.9 }}
+>
 <Hobbies></Hobbies>
+</motion.div>
     </div>
   );
 };

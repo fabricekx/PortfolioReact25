@@ -14,8 +14,9 @@ const resources = {
       myprojects: "My Projects",
       contact: "Contact",
       intro:
-        "Hi, I am a freelance web developer specialized in accessibility and user interface design. I contribute to the creation and maintenance of front-end and back-end user interface components, ensuring compliance with web accessibility standards and best practices to provide an inclusive user experience. I am also a web technology trainer. ",
-      showProject: "Show Project",
+        "Hi, I am a freelance web developer specialized in accessibility and user interface design. I contribute to the creation and maintenance of front-end and back-end user interface components. ",
+      intro2 : "I ensure compliance with web accessibility standards and best practices to provide an inclusive user experience. I am also a web technology trainer.",
+        showProject: "Show Project",
       techno:
         "Designed with Figma, coded with Visual Studio Code, using the React framework and the Strapi CMS",
       // Partie About me
@@ -52,8 +53,9 @@ const resources = {
       myprojects: "Mes Projets",
       contact: "Contact",
       intro:
-        "Bonjour, je suis développeur web freelance, spécialisé en accessibilité et en interfaces utilisateur. Je contribue à la création et à la maintenance des composants d'interface utilisateur front-end et back-end, en veillant au respect des normes et bonnes pratiques d'accessibilité web pour offrir une expérience utilisateur optimale. Je suis également formateur en technologies Web",
-      showProject: "Voir le projet",
+        "Bonjour, je suis développeur web freelance, spécialisé en accessibilité et en interfaces utilisateur. Je contribue à la création et à la maintenance des composants d'interface utilisateur front-end et back-end. ",
+      intro2 : "Je veille au respect des normes et bonnes pratiques d'accessibilité web pour offrir une expérience utilisateur optimale. Je suis également formateur en technologies Web",
+        showProject: "Voir le projet",
       techno:
         "Designé avec Figma, codé avec VisualStudioCode, avec le frameWork React et le CMS Strapi",
       // Partie About

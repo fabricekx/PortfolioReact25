@@ -41,7 +41,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
   useEffect(() => {
     if (inline) {
       setProjects(fallbackProjects);
-      console.log("fallbackProjects picture url:", fallbackProjects[0]?.Picture?.url);
+      // console.log("fallbackProjects picture url:", fallbackProjects[0]?.Picture?.url);
     } else {
       fetchProjects().then(setProjects).catch(console.error);
     }

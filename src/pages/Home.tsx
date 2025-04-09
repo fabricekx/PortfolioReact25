@@ -43,7 +43,16 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
       >
         {t("intro")}
       </motion.p>
+      <motion.p
+        className="!m-4 !text-lg md:!text-xl hidden md:block text-justify text-gray-300 max-w-2xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        {t("intro2")}
+      </motion.p>
       <motion.div
+      className="!mb-5"
        animate={{ opacity: [0.7, 1, 0.7] }}
        transition={{
          duration: 2,
@@ -62,6 +71,7 @@ const Home: React.FC<HomeProps> = ({ setIsHovering }) => {
           {t("viewWork")}
         </Link>
       </motion.div>
+      <div className="h-7"></div>
     </div>
   );
 };
