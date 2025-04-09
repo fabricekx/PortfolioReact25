@@ -71,6 +71,7 @@ const App = () => {
             Full Stack Developper
           </p>
           <p className="text-gray-400">{t("description")}</p>
+          
         </motion.div>
 
         {/* Navigation */}

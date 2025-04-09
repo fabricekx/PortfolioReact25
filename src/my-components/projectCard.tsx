@@ -37,12 +37,13 @@ const ProjectCard: React.FC<ProjectCardProps>  =({project, setIsHovering}) =>{
     const { ref, isVisible } = useSectionReacher();
   // Récupère l'image en format "small" si dispo, sinon l'image originale
   const imageUrl = project.Picture?.formats?.small?.url || project.Picture?.url;
-  
+ 
+
     return (<motion.div
       key={project.id}
       ref = {ref}
       initial={{ opacity: 0, x: -150 }}
-      animate={isVisible ? { opacity: 1, x: 0 } : { }}
+      animate={isVisible ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.5 }}
   
     >

@@ -42,7 +42,7 @@ const useSectionReacher = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log("👀 Section visible ?", entry.isIntersecting);
+          // console.log("👀 Section visible ?", entry.isIntersecting);
           setIsVisible(entry.isIntersecting);
         });
       },
