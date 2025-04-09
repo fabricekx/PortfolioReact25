@@ -24,6 +24,12 @@ html, body, #root, #main-div {
   cursor: none; /* Supprime le curseur standard */
 }
 
+html, body, #root {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background-color: #000;
+}
+
+
 /* a ajouter sur les liens pour cacher le curseur natif */
 .hide-cursor {
   cursor: none; /* Cache le curseur natif */
