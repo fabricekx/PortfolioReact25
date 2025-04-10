@@ -81,46 +81,70 @@ const App = () => {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="!mt-8 sidebar"
         >
-          <ul className="!space-y-4 !ml-10">
-            {/* Création des liens à partir d'un tableau */}
-            {[
-              { path: "/", label: t("home"), icon: "🏠" },
-              { path: "/about", label: t("about"), icon: "👤" },
-              { path: "/projects", label: t("projects"), icon: "📁" },
-              { path: "/contact", label: t("contact"), icon: "📧" },
-            ].map((item) => (
-              <li key={item.path} className="relative">
-                <Link
-                  to={item.path}
-                  className="interactive-area hide-cursor !text-2xl !text-emerald-950 hover:text-gray-300 relative"
-                  onMouseEnter={() => setIsHovering(true)} // modification du pointer
-                  onMouseLeave={() => setIsHovering(false)}
-                >
-                  {item.label}
-                </Link>
-                {location.pathname === item.path && ( // si le chemin correspond à la page en cours, on ajoute une ligne avec une animation
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute left-0 bottom-0 w-1/2 !h-[2px] bg-emerald-900"
-                    initial={{ width: 0 }}
-                    animate={{
-                      width: "100px",
-                      backgroundColor: ["#8989ff", "#5656ff", "#8989ff"],
-                    }} // Scintillement entre bleu et blanc
-                    transition={{
-                      width: { duration: 0.5 },
-                      backgroundColor: {
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut",
-                        duration: 2, // Durée de l'animation de changement de couleur
-                      },
-                    }}
-                  />
-                )}
-              </li>
-            ))}
-          </ul>
+         <ul className="!space-y-4 !ml-10">
+  {[
+    { path: "/", label: t("home"), icon: "🏠" },
+    { path: "/about", label: t("about"), icon: "👤" },
+    { path: "/projects", label: t("projects"), icon: "📁" },
+    { path: "/contact", label: t("contact"), icon: "📧" },
+  ].map((item) => {
+    const isActive = location.pathname === item.path;
+
+    const animate = {
+      opacity: 1,
+      y: 0,
+      x: isActive ? [0, 10, -10, 0] : 0,
+    };
+
+    const transition = isActive
+      ? {
+          ease: "linear",
+          duration: 2,
+          repeat: Infinity,
+          delay: 1,
+        }
+      : { duration: 0.3 };
+
+    return (
+      <motion.li
+        key={item.path}
+        className="relative"
+        animate={animate}
+        transition={transition}
+      >
+        <Link
+          to={item.path}
+          className="interactive-area hide-cursor !text-2xl !text-emerald-950 hover:text-gray-300 relative"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
+          {item.label}
+        </Link>
+
+        {isActive && (
+          <motion.div
+            layoutId="underline"
+            className="absolute left-0 bottom-0 w-1/2 !h-[2px] bg-emerald-900"
+            initial={{ width: 0 }}
+            animate={{
+              width: "100px",
+              backgroundColor: ["#8989ff", "#5656ff", "#8989ff"],
+            }}
+            transition={{
+              width: { duration: 0.5 },
+              backgroundColor: {
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+                duration: 2,
+              },
+            }}
+          />
+        )}
+      </motion.li>
+    );
+  })}
+</ul>
         </motion.nav>
 
         {/* Bouton Langue */}
