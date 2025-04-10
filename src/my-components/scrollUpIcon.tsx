@@ -15,7 +15,7 @@ const ScrollUp: React.FC<ScrollUpProps> = ({ myScroll , setIsHovering}) => {
     }
   };
 
-  if (myScroll <= 0) return null; // 👈 flèche cachée tout en haut
+  if (myScroll <= 0) {setIsHovering(false); return null}; // 👈 flèche cachée tout en haut
 
   return (
     <motion.div

@@ -24,7 +24,7 @@ const ScrollDown: React.FC<ScrollDownProps> = ({ myScroll, setIsHovering}) => {
     return myScroll >= maxScroll-10;
   };
 
-  if (isAtBottom()) return null; // 👈 On cache la flèche quand on est tout en bas
+  if (isAtBottom()) {setIsHovering(false); return null}; // 👈 On cache la flèche quand on est tout en bas
 
 
   return (
