@@ -1,18 +1,28 @@
 import { FaChevronUp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const ScrollUp = () => {
-  const handleScroll = () => {
-    const scrollableDiv = document.getElementById("maDivScrollable"); // c'est cette div div qui va scroller, pas tout le document"
+interface ScrollUpProps {
+  setIsHovering: (hovering: boolean) => void;
+myScroll: number
+}
 
-    if (scrollableDiv)  scrollableDiv.scrollBy({ top : -500, behavior: "smooth" } );
-    {console.log("scroll");
-  };}
+
+const ScrollUp: React.FC<ScrollUpProps> = ({ myScroll , setIsHovering}) => {
+  const scrollableDiv = document.getElementById("maDivScrollable");
+  const handleScroll = () => {
+    if (scrollableDiv) {
+      scrollableDiv.scrollBy({ top: -500, behavior: "smooth" });
+    }
+  };
+
+  if (myScroll <= 0) return null; // 👈 flèche cachée tout en haut
 
   return (
     <motion.div
     onClick={handleScroll}
-    className="cursor-pointer fixed top-65 left-0.9 transform -translate-x-1/2"
+    onMouseEnter={() => setIsHovering(true)}
+    onMouseLeave={() => setIsHovering(false)}
+    className="hide-cursor fixed top-65 left-0.9 transform -translate-x-1/2"
     animate={{ y: [0, 10, 0] }}
     transition={{ repeat: Infinity, duration: 1 }}
   >

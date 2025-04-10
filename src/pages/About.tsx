@@ -53,8 +53,7 @@ const inline = true
 
   
   // Pour mettre à jour en json les données de strapi local, il faut soit lancer les scripts
-  // indépendamment (ex node script/prepareExperience.mjs) soit lancer prepareAll grâce à
-  //  npm run prepareAll
+  // indépendamment (ex node my-script/prepareExperience.mjs) soit lancer prepareAll 
   
   useEffect(() => {
     if (inline) {
@@ -66,10 +65,32 @@ const inline = true
     }
   }, []);
 
- 
+  
+  const [myScroll, setMyScroll] = useState<number>(0);
+
+  useEffect(() => {
+    const scrollableDiv = document.getElementById("maDivScrollable");
+
+    const handleScroll = () => {
+      if (scrollableDiv) {
+        setMyScroll(scrollableDiv.scrollTop);
+      }
+    };
+
+    if (scrollableDiv) {
+      scrollableDiv.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollableDiv) {
+        scrollableDiv.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
   return (
     <div className="w-full overflow-x-auto flex-col align-middle">
-      <ScrollUp></ScrollUp>
+      <ScrollUp myScroll={myScroll} setIsHovering={setIsHovering} /> {/* fleche scroll up  */}
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
       <div className="md:fixed bg-emerald-600  !pt-5 top-0 z-1">
         <motion.h1 
@@ -90,7 +111,7 @@ const inline = true
             ease: "easeInOut",
           }, // Pour l'animation répétée
         }}>About me</motion.h1>
-        <ScrollDown></ScrollDown>
+        <ScrollDown myScroll={myScroll} setIsHovering={setIsHovering}  />
         <motion.p  initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
