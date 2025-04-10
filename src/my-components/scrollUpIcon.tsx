@@ -22,7 +22,7 @@ const ScrollUp: React.FC<ScrollUpProps> = ({ myScroll , setIsHovering}) => {
     onClick={handleScroll}
     onMouseEnter={() => setIsHovering(true)}
     onMouseLeave={() => setIsHovering(false)}
-    className="hide-cursor fixed top-65 left-0.9 transform -translate-x-1/2"
+    className="hide-cursor fixed top-65 md:top-30 left-0.9 transform -translate-x-1/2"
     animate={{ y: [0, 10, 0] }}
     transition={{ repeat: Infinity, duration: 1 }}
   >

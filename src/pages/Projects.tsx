@@ -39,6 +39,7 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
   // indépendamment (ex node script/prepareExperience.mjs) soit lancer prepareAll grâce à
   //  npm run prepareAll
   
+  const [myScroll, setMyScroll] = useState<number>(0);
 
   useEffect(() => {
     if (inline) {
@@ -49,11 +50,29 @@ const Projects: React.FC<ProjectsProps> = ({ setIsHovering }) => {
     }
   }, []);
 
- 
+  useEffect(() => {
+    const scrollableDiv = document.getElementById("maDivScrollable");
+
+    const handleScroll = () => {
+      if (scrollableDiv) {
+        setMyScroll(scrollableDiv.scrollTop);
+      }
+    };
+
+    if (scrollableDiv) {
+      scrollableDiv.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollableDiv) {
+        scrollableDiv.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
 
   return (
-    <div><ScrollUp></ScrollUp>
-<ScrollDown></ScrollDown>
+    <div><ScrollUp setIsHovering={setIsHovering} myScroll={myScroll}/>
+<ScrollDown setIsHovering={setIsHovering} myScroll={myScroll}/>
     <div className="h-full flex flex-col items-center  text-center">
       {/* div titre */}
       <motion.h1
