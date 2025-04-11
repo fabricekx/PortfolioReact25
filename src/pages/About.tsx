@@ -92,7 +92,7 @@ const inline = true
     <div className="w-full overflow-x-auto flex-col align-middle">
       <ScrollUp myScroll={myScroll} setIsHovering={setIsHovering} /> {/* fleche scroll up  */}
         {/* Div contenant le titre, un petite description et un nav, en fixe sur les grand écrans pour éviter le défilement */}
-      <div className="md:fixed bg-emerald-600  !pt-5 top-0 z-1">
+      <div className="md:fixed bg-emerald-600  !pt-6 top-0 z-1">
         <motion.h1 
         className="!text-3xl text-center md:!text-4xl !mb-4 "
         initial={{ opacity: 0, y: -20 }} // Animation pour l'apparition
@@ -111,6 +111,8 @@ const inline = true
             ease: "easeInOut",
           }, // Pour l'animation répétée
         }}>About me</motion.h1>
+
+        {/* Mon composant ScrollDowb en position fixe */}
         <ScrollDown myScroll={myScroll} setIsHovering={setIsHovering}  />
         <motion.p  initial={{ opacity: 0, x: 150 }}
               animate={{ opacity: 1, x: 0 }}
@@ -121,8 +123,12 @@ const inline = true
       
       </div>
       {/* div contenant toutes les cartes experiences, formations etc.. */}
-      <section id="experience" className="!p-6 flex flex-col !space-y-6 md:!pt-56">
-      <h2 className="text-white !text-2xl !mb-4">{t("experiences")}</h2>
+      <section id="experience" className="md:!p-14 !p-6 flex flex-col align-middle !space-y-6 md:!pt-56">
+      <motion.h2 
+      initial={{opacity: 0, scale:5}}
+      animate= {{opacity: 1, scale:1}}
+      transition={{duration:0.5}}
+      className="text-white !text-2xl !mb-4">{t("experiences")}</motion.h2>
 
         {experiences.map((experience) => {
           return (
@@ -131,8 +137,12 @@ const inline = true
         })}
       </section>
 
-      <section id="formation" className="!p-6 flex flex-col !space-y-6 ">
-      <h2 className="text-white !text-2xl !mb-4">{t("formation")}</h2>
+      <section id="formation" className="md:!p-14 !p-6 flex flex-col !space-y-6 ">
+      <motion.h2 
+      initial={{opacity: 0, scale:5}}
+      whileInView= {{opacity: 1, scale:1}}
+      transition={{duration:0.5}}
+      className="text-white !text-2xl !mb-4">{t("formation")}</motion.h2>
 
         {formations.map((formation) => {
           return (
