@@ -2,13 +2,19 @@ import { FaSeedling, FaMountain, FaLaptopCode } from "react-icons/fa";
 import { GiMountains } from "react-icons/gi";
 import { GiShipWheel } from "react-icons/gi";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
 
 const Hobbies = () => {
   const { t } = useTranslation(); // Accès aux traductions
 
   return (
-    <section id="hobbies" className="!p-14 flex flex-col !space-y-6 ">
-      <h2 className="text-white !text-2xl !mb-4">Hobbies</h2>
+    <section id="hobbies" className="md:!p-14 !p-6 flex flex-col !space-y-6 ">
+      <motion.h2
+      initial={{opacity: 0,  scale: 5}}
+      whileInView= {{opacity: 1,  scale: 1}}
+      transition={{duration:0.5}}
+      className="text-white !text-2xl !mb-4">Hobbies</motion.h2>
 
       <div className="flex gap-4   justify-evenly align-middle flex-wrap">
        

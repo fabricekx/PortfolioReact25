@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import ProgressBar from "./progressBar";
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaDatabase, FaPython, FaMicrochip } from "react-icons/fa";
 import useSectionReacher from "@/my-utils/sectionReacher";
+import { motion } from "framer-motion";
 
 
 
@@ -23,8 +24,13 @@ const {ref: refSkill,isVisible : isVisibleSkill}= useSectionReacher(); // hook p
   
 
   return (
-    <section ref={refSkill} id="programmation" className="!p-14 flex flex-col !space-y-6 ">
-      <h2 className="text-white !text-2xl !mb-4">{t("programmation2")}</h2>
+    <section ref={refSkill} id="programmation" className="md:!p-14 !p-6 flex flex-col !space-y-6 ">
+      <motion.h2 
+      initial={{opacity: 0,  scale: 5}}
+      whileInView= {{opacity: 1,  scale: 1}}
+      transition={{duration:0.5}}
+      className="text-white !text-2xl !mb-4 origin-center">{t("programmation2")}
+      </motion.h2>
       <ProgressBar icon={techIcons["HTML & CSS"]} isVisible={isVisibleSkill} percentage={95} label="HTML & CSS" />
       <ProgressBar icon={techIcons["JavaScript"]} isVisible={isVisibleSkill} percentage={80} label="JavaScript [React, Node.Js, Nest.Js]" />
       <ProgressBar icon={techIcons["PHP"]}  isVisible= {isVisibleSkill} percentage={75} label="PHP [Symfony]" color="bg-emerald-400"/>
