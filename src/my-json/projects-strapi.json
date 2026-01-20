@@ -458,5 +458,51 @@
         "publishedAt": "2025-04-04T12:01:53.585Z"
       }
     ]
-  }
+  },
+  {
+  "id": 46,
+  "documentId": "local-project-46",
+  "Title": "Arkanoïd",
+  "Description": "Vanilla JS using <canvas> html object",
+  "Link": "https://fabricekx.github.io/arkanoid/",
+  "createdAt": "2025-04-10T10:00:00.000Z",
+  "updatedAt": "2025-04-10T10:00:00.000Z",
+  "publishedAt": "2025-04-10T10:00:00.000Z",
+  "TitleFr": "Arkanoïd",
+  "DescriptionFr": "Projet en Vanilla JS utilisant la balise html <canvas>",
+  "Picture": {
+    "id": 999,
+    "documentId": "local-image-999",
+    "name": "arkanoid.jpg",
+    "width": 600,
+    "height": 400,
+    "url": "/uploads/arkanoid.jpg"
+  },
+  "technos": [
+ {
+        "id": 2,
+        "documentId": "jvajokufqeivxrcviq28myhn",
+        "Technos": "CSS",
+        "createdAt": "2025-04-04T11:43:33.363Z",
+        "updatedAt": "2025-04-04T11:43:38.894Z",
+        "publishedAt": "2025-04-04T11:43:38.940Z"
+      },
+      {
+        "id": 4,
+        "documentId": "u17wgsqs5r55oy5qcmvzxom2",
+        "Technos": "HTML",
+        "createdAt": "2025-04-04T11:43:58.182Z",
+        "updatedAt": "2025-04-04T11:44:01.051Z",
+        "publishedAt": "2025-04-04T11:44:01.120Z"
+      },
+      {
+        "id": 9,
+        "documentId": "iu6n7nfda91raivn38apbg1r",
+        "Technos": "JS",
+        "createdAt": "2025-04-04T11:44:35.545Z",
+        "updatedAt": "2025-04-04T11:44:50.564Z",
+        "publishedAt": "2025-04-04T11:44:50.587Z"
+      }
+  ]
+}
 ]

@@ -1,0 +1,6 @@
+npm install
+npm run dev
+
+Pour installer de nouveaux projet, le plus simple est de passer directement passer
+par projects-strapi.json
+
