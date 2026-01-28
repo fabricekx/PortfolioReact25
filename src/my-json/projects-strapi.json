@@ -504,5 +504,51 @@
         "publishedAt": "2025-04-04T11:44:50.587Z"
       }
   ]
+},
+{
+  "id": 47,
+  "documentId": "local-project-47",
+  "Title": "Memory",
+  "Description": "Vanilla JS for learning DOM elements",
+  "Link": "https://fabricekx.github.io/memory/",
+  "createdAt": "2025-04-10T10:00:00.000Z",
+  "updatedAt": "2025-04-10T10:00:00.000Z",
+  "publishedAt": "2025-04-10T10:00:00.000Z",
+  "TitleFr": "Memory",
+  "DescriptionFr": "Projet en Vanilla JS pour apprendre à manipuler le DOM",
+  "Picture": {
+    "id": 999,
+    "documentId": "local-image-999",
+    "name": "memory.jpg",
+    "width": 600,
+    "height": 400,
+    "url": "/uploads/memory.jpg"
+  },
+  "technos": [
+ {
+        "id": 2,
+        "documentId": "jvajokufqeivxrcviq28myhn",
+        "Technos": "CSS",
+        "createdAt": "2025-04-04T11:43:33.363Z",
+        "updatedAt": "2025-04-04T11:43:38.894Z",
+        "publishedAt": "2025-04-04T11:43:38.940Z"
+      },
+      {
+        "id": 4,
+        "documentId": "u17wgsqs5r55oy5qcmvzxom2",
+        "Technos": "HTML",
+        "createdAt": "2025-04-04T11:43:58.182Z",
+        "updatedAt": "2025-04-04T11:44:01.051Z",
+        "publishedAt": "2025-04-04T11:44:01.120Z"
+      },
+      {
+        "id": 9,
+        "documentId": "iu6n7nfda91raivn38apbg1r",
+        "Technos": "JS",
+        "createdAt": "2025-04-04T11:44:35.545Z",
+        "updatedAt": "2025-04-04T11:44:50.564Z",
+        "publishedAt": "2025-04-04T11:44:50.587Z"
+      }
+  ]
 }
 ]
